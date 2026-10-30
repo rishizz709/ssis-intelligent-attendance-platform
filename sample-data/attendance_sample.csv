@@ -1,0 +1,9 @@
+courseCode,courseName,facultyName,credits,classesHeld,classesAttended,percentage,target,safeBunks,classesNeeded,status
+241CS017,OOAD & UML,Sunkavilli Vijaya Nirmala,4,56,40,71.43,75.0,0,9,CRITICAL
+241AI021,Machine Learning,Dr. Ch. Srinivas Rao,4,56,43,76.79,75.0,1,0,SAFE
+241AI023,Deep Learning,Dr. M. Swetha,3,55,42,76.36,75.0,1,0,SAFE
+241CS019,Cloud Computing,Dr. P. Rajesh Kumar,3,57,46,80.70,75.0,4,0,SAFE
+241CS015,Computer Networks,Smt. P. Hema Latha,3,54,41,75.93,75.0,0,0,SAFE
+241CS016,Compiler Design,Dr. S. K. Vijaya,3,52,40,76.92,75.0,1,0,SAFE
+241CS020,Web Technologies,Mr. K. V. Mohan,3,54,42,77.78,75.0,2,0,SAFE
+241AI025,AI Ethics & Governance,Dr. G. Lakshmi Prasanna,2,50,40,80.00,75.0,3,0,SAFE

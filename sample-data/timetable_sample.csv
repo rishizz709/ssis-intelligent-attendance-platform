@@ -1,0 +1,25 @@
+dayOfWeek,period,timeSlot,courseCode,subjectName,facultyName,room,type
+Monday,1,09:00 AM - 10:00 AM,241CS015,Computer Networks,Smt. P. Hema Latha,CSE-202,THEORY
+Monday,2,10:00 AM - 11:00 AM,241CS017,OOAD & UML,Sunkavilli Vijaya Nirmala,CSE-204,THEORY
+Monday,3,11:15 AM - 12:15 PM,241AI021,Machine Learning,Dr. Ch. Srinivas Rao,AI-101,THEORY
+Monday,4,01:00 PM - 03:00 PM,241CS019,API & Micro Services Lab,Dr. V. Rajesh Kumar,Lab-4,LAB
+Monday,5,03:00 PM - 04:00 PM,241AI023,Soft Computing,Prof. K. Satyanarayana,CSE-204,THEORY
+Tuesday,1,09:00 AM - 10:00 AM,241CS019,API & Micro Services,Dr. V. Rajesh Kumar,AI-102,THEORY
+Tuesday,2,10:00 AM - 11:00 AM,241AI025,Computer Vision,Dr. M. Venkata Reddy,CSE-204,THEORY
+Tuesday,3,11:15 AM - 12:15 PM,241CS017,OOAD & UML,Sunkavilli Vijaya Nirmala,CSE-204,THEORY
+Tuesday,4,01:00 PM - 02:00 PM,241HS005,Engineering Economics,Dr. G. Lakshmi Prasanna,CSE-103,THEORY
+Tuesday,5,02:00 PM - 04:00 PM,241AI021,Machine Learning Lab,Dr. Ch. Srinivas Rao,AI-Lab 2,LAB
+Wednesday,1,09:00 AM - 10:00 AM,241AI021,Machine Learning,Dr. Ch. Srinivas Rao,AI-101,THEORY
+Wednesday,2,10:00 AM - 11:00 AM,241AI023,Soft Computing,Prof. K. Satyanarayana,CSE-204,THEORY
+Wednesday,3,11:15 AM - 12:15 PM,241CS015,Computer Networks,Smt. P. Hema Latha,CSE-202,THEORY
+Wednesday,4,01:00 PM - 03:00 PM,241HS009,Employability Skill-IV,Mr. David J. Morris,Auditorium-2,TUTORIAL
+Thursday,1,09:00 AM - 10:00 AM,241CS017,OOAD & UML,Sunkavilli Vijaya Nirmala,CSE-204,THEORY
+Thursday,2,10:00 AM - 11:00 AM,241CS019,API & Micro Services,Dr. V. Rajesh Kumar,AI-102,THEORY
+Thursday,3,11:15 AM - 12:15 PM,241AI025,Computer Vision,Dr. M. Venkata Reddy,CSE-204,THEORY
+Thursday,4,01:00 PM - 03:00 PM,241AI025,Computer Vision Lab,Dr. M. Venkata Reddy,CV-Lab,LAB
+Friday,1,09:00 AM - 10:00 AM,241AI023,Soft Computing,Prof. K. Satyanarayana,CSE-204,THEORY
+Friday,2,10:00 AM - 11:00 AM,241AI021,Machine Learning,Dr. Ch. Srinivas Rao,AI-101,THEORY
+Friday,3,11:15 AM - 12:15 PM,241HS005,Engineering Economics,Dr. G. Lakshmi Prasanna,CSE-103,THEORY
+Friday,4,01:00 PM - 02:00 PM,241CS015,Computer Networks,Smt. P. Hema Latha,CSE-202,THEORY
+Saturday,1,09:00 AM - 11:00 AM,241CS017,OOAD Case Studies Workshop,Sunkavilli Vijaya Nirmala,Seminar Hall 3,TUTORIAL
+Saturday,2,11:15 AM - 01:00 PM,241AI021,AI Capstone Project Clinic,Dr. Ch. Srinivas Rao,AI Project Center,LAB

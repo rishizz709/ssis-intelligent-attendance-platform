@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://aditya.ac.in/ssis/soap"
+           targetNamespace="http://aditya.ac.in/ssis/soap"
+           elementFormDefault="qualified">
+
+    <!-- Request Element -->
+    <xs:element name="GetStudentResultRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rollNumber" type="xs:string"/>
+                <xs:element name="semester" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Response Element -->
+    <xs:element name="GetStudentResultResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rollNumber" type="xs:string"/>
+                <xs:element name="studentName" type="xs:string"/>
+                <xs:element name="program" type="xs:string"/>
+                <xs:element name="semester" type="xs:string"/>
+                <xs:element name="sgpa" type="xs:double"/>
+                <xs:element name="cgpa" type="xs:double"/>
+                <xs:element name="overallAttendancePercentage" type="xs:double"/>
+                <xs:element name="examEligibility" type="xs:string"/>
+                <xs:element name="results" type="tns:CourseResult" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CourseResult">
+        <xs:sequence>
+            <xs:element name="courseCode" type="xs:string"/>
+            <xs:element name="courseName" type="xs:string"/>
+            <xs:element name="internalMarks" type="xs:int"/>
+            <xs:element name="maxMarks" type="xs:int"/>
+            <xs:element name="grade" type="xs:string"/>
+            <xs:element name="credits" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

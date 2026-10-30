@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-slate-800 antialiased font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Micro-interaction utilities */
+.card-modern {
+  @apply bg-white rounded-2xl border border-slate-200/80 shadow-card transition-all duration-300;
+}
+
+.card-modern:hover {
+  @apply shadow-card-hover border-slate-300/90;
+}
+
+.badge-status {
+  @apply px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide inline-flex items-center gap-1.5;
+}
+
+/* Custom gradient backgrounds for hero sections */
+.bg-aditya-gradient {
+  background: linear-gradient(135deg, #0F2A4A 0%, #1E3A8A 60%, #1E40AF 100%);
+}
+
+.bg-accent-gradient {
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+}
+
+.bg-subtle-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.05) 0%, transparent 70%);
+}
