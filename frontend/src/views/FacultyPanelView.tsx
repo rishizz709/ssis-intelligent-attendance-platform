@@ -25,10 +25,10 @@ interface RosterStudent {
 export const FacultyPanelView: React.FC = () => {
   const { user } = useAuth();
   const { subjectAttendance, simulateAttendance } = useStudent();
-  const [topic, setTopic] = useState('UML Sequence Diagrams & Message Passing Semantics');
+  const [topic, setTopic] = useState('RESTful API Design & Microservices Architecture');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Roster of students for OOAD & UML
+  // Roster of students for API & Micro Services
   const [roster, setRoster] = useState<RosterStudent[]>([
     { rollNumber: '24B11AI051', name: 'B. Rishi Vardhan', isPresent: true, priorAttendance: 71.43 },
     { rollNumber: '24B11AI052', name: 'G. Ananya Sharma', isPresent: true, priorAttendance: 84.20 },
@@ -55,7 +55,7 @@ export const FacultyPanelView: React.FC = () => {
     // If Rishi is present, also trigger simulation on student context
     const rishi = roster.find(r => r.rollNumber === '24B11AI051');
     if (rishi) {
-      simulateAttendance('ooad', rishi.isPresent ? 'attend' : 'miss');
+      simulateAttendance('241CS019', rishi.isPresent ? 'attend' : 'miss');
     }
 
     setTimeout(() => {
@@ -77,12 +77,12 @@ export const FacultyPanelView: React.FC = () => {
               Faculty Roll Call Terminal
             </span>
             <span className="text-xs text-purple-200">
-              • Incharge: {user?.name || 'Dr. S. Vijaya Nirmala'} {user?.facultyId ? `(${user.facultyId})` : ''}
+              • Incharge: {user?.name || 'Kumari'} {user?.facultyId ? `(${user.facultyId})` : ''}
             </span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-black text-white mt-1">OOAD & UML Attendance Marker</h1>
+          <h1 className="text-2xl sm:text-3xl font-black text-white mt-1">API & Micro Services Attendance Marker</h1>
           <p className="text-xs text-purple-200/80 mt-0.5">
-            Course: 241CS017 • Section A • Room CSE-204 • Period 2 (10:00 AM - 11:00 AM)
+            Course: 241CS019 • Section A • Room CSE-204 • Period 2 (10:00 AM - 11:00 AM)
           </p>
         </div>
 

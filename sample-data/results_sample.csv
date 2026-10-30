@@ -2,7 +2,7 @@ courseCode,courseName,mid1,mid2,assignment,attendance,totalInternal,maxInternal,
 241CS017,OOAD & UML,25,27,9,3,36,40,A,8.5
 241AI021,Machine Learning,28,29,10,4,38,40,A+,9.2
 241AI023,Deep Learning,26,27,9,4,35,40,A,8.4
-241CS019,Cloud Computing,29,30,10,5,39,40,O,9.8
+241CS019,API & Micro Services,29,30,10,5,39,40,O,9.8
 241CS015,Computer Networks,24,26,8,4,34,40,A,8.2
 241CS016,Compiler Design,25,26,9,4,35,40,A,8.4
 241CS020,Web Technologies,27,28,9,4,37,40,A+,9.0

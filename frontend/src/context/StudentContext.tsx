@@ -243,7 +243,7 @@ export const StudentProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const { todayClasses, nextClass } = useMemo(() => {
     const todayDay: TimetableClass['dayOfWeek'] = 'MONDAY';
     const dayClasses = timetable.filter(t => t.dayOfWeek.toUpperCase() === todayDay);
-    const heroNext = dayClasses.find(c => c.courseCode === '241CS017') || dayClasses[1] || dayClasses[0] || null;
+    const heroNext = dayClasses.find(c => c.courseCode === '241CS019') || dayClasses[1] || dayClasses[0] || null;
 
     return {
       todayClasses: dayClasses,
@@ -273,7 +273,7 @@ export const StudentProvider: React.FC<{ children: React.ReactNode }> = ({ child
   };
 
   const simulateAttendance = (courseCodeOrId: string, action: 'attend' | 'miss') => {
-    const code = courseCodeOrId.toLowerCase().includes('ooad') || courseCodeOrId === '241cs017' ? '241CS017' : courseCodeOrId;
+    const code = courseCodeOrId.toLowerCase().includes('api') || courseCodeOrId === '241cs019' ? '241CS019' : courseCodeOrId;
     recordAttendanceDecision(code, action === 'attend');
   };
 

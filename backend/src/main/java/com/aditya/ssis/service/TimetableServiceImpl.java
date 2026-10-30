@@ -56,15 +56,15 @@ public class TimetableServiceImpl implements TimetableService {
     @Override
     @Transactional(readOnly = true)
     public TimetableEntryDto getNextUpcomingClass(String section) {
-        // Return hero upcoming class: OOAD & UML Period 2 (10:00 - 11:00 AM)
+        // Return hero upcoming class: API & Micro Services Period 2 (10:00 - 11:00 AM)
         return TimetableEntryDto.builder()
                 .id(2L)
                 .dayOfWeek("MONDAY")
                 .period(2)
                 .timeSlot("10:00 AM - 11:00 AM")
-                .courseCode("241CS017")
-                .subjectName("OOAD & UML")
-                .facultyName("Sunkavilli Vijaya Nirmala")
+                .courseCode("241CS019")
+                .subjectName("API & Micro Services")
+                .facultyName("Kumari")
                 .room("CSE-204")
                 .type("THEORY")
                 .build();
@@ -133,7 +133,7 @@ public class TimetableServiceImpl implements TimetableService {
                 .timeSlot(te.getStartTime() + " - " + te.getEndTime())
                 .courseCode(te.getCourse() != null ? te.getCourse().getCourseCode() : "N/A")
                 .subjectName(te.getCourse() != null ? te.getCourse().getCourseName() : "N/A")
-                .facultyName(te.getFaculty() != null ? te.getFaculty().getName() : "Sunkavilli Vijaya Nirmala")
+                .facultyName(te.getFaculty() != null ? te.getFaculty().getName() : "Kumari")
                 .room(te.getRoomNumber())
                 .type(te.getType())
                 .build();
@@ -142,10 +142,10 @@ public class TimetableServiceImpl implements TimetableService {
     private List<TimetableEntryDto> getDefaultTimetable() {
         return List.of(
                 TimetableEntryDto.builder().id(1L).dayOfWeek("MONDAY").period(1).timeSlot("09:00 AM - 10:00 AM").courseCode("241CS015").subjectName("Computer Networks").facultyName("Smt. P. Hema Latha").room("CSE-202").type("THEORY").build(),
-                TimetableEntryDto.builder().id(2L).dayOfWeek("MONDAY").period(2).timeSlot("10:00 AM - 11:00 AM").courseCode("241CS017").subjectName("OOAD & UML").facultyName("Sunkavilli Vijaya Nirmala").room("CSE-204").type("THEORY").build(),
+                TimetableEntryDto.builder().id(2L).dayOfWeek("MONDAY").period(2).timeSlot("10:00 AM - 11:00 AM").courseCode("241CS019").subjectName("API & Micro Services").facultyName("Kumari").room("CSE-204").type("THEORY").build(),
                 TimetableEntryDto.builder().id(3L).dayOfWeek("MONDAY").period(3).timeSlot("11:15 AM - 12:15 PM").courseCode("241AI021").subjectName("Machine Learning").facultyName("Dr. Ch. Srinivas Rao").room("AI-101").type("THEORY").build(),
-                TimetableEntryDto.builder().id(4L).dayOfWeek("MONDAY").period(4).timeSlot("01:00 PM - 03:00 PM").courseCode("241CS019").subjectName("API & Micro Services Lab").facultyName("Dr. V. Rajesh Kumar").room("Lab-4").type("LAB").build(),
-                TimetableEntryDto.builder().id(5L).dayOfWeek("TUESDAY").period(1).timeSlot("09:00 AM - 10:00 AM").courseCode("241CS019").subjectName("API & Micro Services").facultyName("Dr. V. Rajesh Kumar").room("AI-102").type("THEORY").build(),
+                TimetableEntryDto.builder().id(4L).dayOfWeek("MONDAY").period(4).timeSlot("01:00 PM - 03:00 PM").courseCode("241CS019").subjectName("API & Micro Services Lab").facultyName("Kumari").room("Lab-4").type("LAB").build(),
+                TimetableEntryDto.builder().id(5L).dayOfWeek("TUESDAY").period(1).timeSlot("09:00 AM - 10:00 AM").courseCode("241CS019").subjectName("API & Micro Services").facultyName("Kumari").room("AI-102").type("THEORY").build(),
                 TimetableEntryDto.builder().id(6L).dayOfWeek("TUESDAY").period(2).timeSlot("10:00 AM - 11:00 AM").courseCode("241AI025").subjectName("Computer Vision").facultyName("Dr. M. Venkata Reddy").room("CSE-204").type("THEORY").build(),
                 TimetableEntryDto.builder().id(7L).dayOfWeek("TUESDAY").period(3).timeSlot("11:15 AM - 12:15 PM").courseCode("241CS017").subjectName("OOAD & UML").facultyName("Sunkavilli Vijaya Nirmala").room("CSE-204").type("THEORY").build()
         );

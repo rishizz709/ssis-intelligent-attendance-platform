@@ -312,8 +312,8 @@ export const LandingLoginView: React.FC = () => {
                     <BookOpen className="w-3.5 h-3.5 text-purple-400" />
                     <span>Faculty</span>
                   </div>
-                  <div className="text-[11px] text-white font-medium truncate mt-0.5">Dr. Nirmala</div>
-                  <div className="text-[9px] text-slate-400 truncate">OOAD & UML</div>
+                  <div className="text-[11px] text-white font-medium truncate mt-0.5">Kumari</div>
+                  <div className="text-[9px] text-slate-400 truncate">API & Micro Services</div>
                 </button>
 
                 <button
@@ -345,7 +345,7 @@ export const LandingLoginView: React.FC = () => {
           <div className="flex items-center space-x-4">
             <span className="text-slate-400">Project Architect: B. Rishi Vardhan (24B11AI051)</span>
             <span>•</span>
-            <span className="text-orange-400 font-medium">OOAD Capstone 2026</span>
+            <span className="text-blue-400 font-medium">API & Micro Services 2026</span>
           </div>
         </div>
       </footer>

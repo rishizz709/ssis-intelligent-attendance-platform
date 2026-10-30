@@ -38,7 +38,7 @@ export const DEMO_USERS: User[] = [
   {
     id: 'USR-004',
     email: 'nirmala.faculty@aditya.ac.in',
-    name: 'Dr. S. Vijaya Nirmala',
+    name: 'Kumari',
     role: 'FACULTY',
     facultyId: 'FAC-201',
     department: 'Computer Science & Engineering',
@@ -128,7 +128,7 @@ export const INITIAL_SUBJECTS: SubjectAttendance[] = [
     courseCode: '241CS019',
     courseName: 'API Design & Microservices Architecture',
     shortName: 'API & Micro Services',
-    facultyName: 'Dr. V. Rajesh Kumar',
+    facultyName: 'Kumari',
     credits: 4,
     classesHeld: 81,
     classesAttended: 81,
@@ -209,13 +209,13 @@ export const INITIAL_SUBJECTS: SubjectAttendance[] = [
 export const INITIAL_TIMETABLE: TimetableClass[] = [
   // Monday
   { id: 'TT-M1', dayOfWeek: 'MONDAY', startTime: '09:00', endTime: '10:00', courseCode: '241CS015', subjectName: 'Computer Networks', facultyName: 'Smt. P. Hema Latha', roomNumber: 'CSE-202', type: 'THEORY' },
-  { id: 'TT-M2', dayOfWeek: 'MONDAY', startTime: '10:00', endTime: '11:00', courseCode: '241CS017', subjectName: 'OOAD & UML', facultyName: 'Sunkavilli Vijaya Nirmala', roomNumber: 'CSE-204', type: 'THEORY' },
+  { id: 'TT-M2', dayOfWeek: 'MONDAY', startTime: '10:00', endTime: '11:00', courseCode: '241CS019', subjectName: 'API & Micro Services', facultyName: 'Kumari', roomNumber: 'CSE-204', type: 'THEORY' },
   { id: 'TT-M3', dayOfWeek: 'MONDAY', startTime: '11:15', endTime: '12:15', courseCode: '241AI021', subjectName: 'Machine Learning', facultyName: 'Dr. Ch. Srinivas Rao', roomNumber: 'AI-101', type: 'THEORY' },
-  { id: 'TT-M4', dayOfWeek: 'MONDAY', startTime: '13:00', endTime: '15:00', courseCode: '241CS019', subjectName: 'API & Micro Services Lab', facultyName: 'Dr. V. Rajesh Kumar', roomNumber: 'Lab-4', type: 'LAB' },
+  { id: 'TT-M4', dayOfWeek: 'MONDAY', startTime: '13:00', endTime: '15:00', courseCode: '241CS019', subjectName: 'API & Micro Services Lab', facultyName: 'Kumari', roomNumber: 'Lab-4', type: 'LAB' },
   { id: 'TT-M5', dayOfWeek: 'MONDAY', startTime: '15:00', endTime: '16:00', courseCode: '241AI023', subjectName: 'Soft Computing', facultyName: 'Prof. K. Satyanarayana', roomNumber: 'CSE-204', type: 'THEORY' },
 
   // Tuesday
-  { id: 'TT-T1', dayOfWeek: 'TUESDAY', startTime: '09:00', endTime: '10:00', courseCode: '241CS019', subjectName: 'API & Micro Services', facultyName: 'Dr. V. Rajesh Kumar', roomNumber: 'AI-102', type: 'THEORY' },
+  { id: 'TT-T1', dayOfWeek: 'TUESDAY', startTime: '09:00', endTime: '10:00', courseCode: '241CS019', subjectName: 'API & Micro Services', facultyName: 'Kumari', roomNumber: 'AI-102', type: 'THEORY' },
   { id: 'TT-T2', dayOfWeek: 'TUESDAY', startTime: '10:00', endTime: '11:00', courseCode: '241AI025', subjectName: 'Computer Vision', facultyName: 'Dr. M. Venkata Reddy', roomNumber: 'CSE-204', type: 'THEORY' },
   { id: 'TT-T3', dayOfWeek: 'TUESDAY', startTime: '11:15', endTime: '12:15', courseCode: '241CS017', subjectName: 'OOAD & UML', facultyName: 'Sunkavilli Vijaya Nirmala', roomNumber: 'CSE-204', type: 'THEORY' },
   { id: 'TT-T4', dayOfWeek: 'TUESDAY', startTime: '13:00', endTime: '14:00', courseCode: '241HS005', subjectName: 'Engineering Economics', facultyName: 'Dr. G. Lakshmi Prasanna', roomNumber: 'CSE-103', type: 'THEORY' },
@@ -229,7 +229,7 @@ export const INITIAL_TIMETABLE: TimetableClass[] = [
 
   // Thursday
   { id: 'TT-TH1', dayOfWeek: 'THURSDAY', startTime: '09:00', endTime: '10:00', courseCode: '241CS017', subjectName: 'OOAD & UML', facultyName: 'Sunkavilli Vijaya Nirmala', roomNumber: 'CSE-204', type: 'THEORY' },
-  { id: 'TT-TH2', dayOfWeek: 'THURSDAY', startTime: '10:00', endTime: '11:00', courseCode: '241CS019', subjectName: 'API & Micro Services', facultyName: 'Dr. V. Rajesh Kumar', roomNumber: 'AI-102', type: 'THEORY' },
+  { id: 'TT-TH2', dayOfWeek: 'THURSDAY', startTime: '10:00', endTime: '11:00', courseCode: '241CS019', subjectName: 'API & Micro Services', facultyName: 'Kumari', roomNumber: 'AI-102', type: 'THEORY' },
   { id: 'TT-TH3', dayOfWeek: 'THURSDAY', startTime: '11:15', endTime: '12:15', courseCode: '241AI025', subjectName: 'Computer Vision', facultyName: 'Dr. M. Venkata Reddy', roomNumber: 'CSE-204', type: 'THEORY' },
   { id: 'TT-TH4', dayOfWeek: 'THURSDAY', startTime: '13:00', endTime: '15:00', courseCode: '241AI025', subjectName: 'Computer Vision Lab', facultyName: 'Dr. M. Venkata Reddy', roomNumber: 'CV-Lab', type: 'LAB' },
 
@@ -248,7 +248,7 @@ export const INITIAL_ATTENDANCE_HISTORY: AttendanceHistoryEntry[] = [
   { id: 'AH-01', date: '2026-09-30', day: 'WED', courseCode: '241AI021', subjectName: 'Machine Learning', timeSlot: '09:00 - 10:00', status: 'PRESENT', facultyName: 'Dr. Ch. Srinivas Rao' },
   { id: 'AH-02', date: '2026-09-30', day: 'WED', courseCode: '241AI023', subjectName: 'Soft Computing', timeSlot: '10:00 - 11:00', status: 'ABSENT', facultyName: 'Prof. K. Satyanarayana' },
   { id: 'AH-03', date: '2026-09-30', day: 'WED', courseCode: '241CS015', subjectName: 'Computer Networks', timeSlot: '11:15 - 12:15', status: 'PRESENT', facultyName: 'Smt. P. Hema Latha' },
-  { id: 'AH-04', date: '2026-09-29', day: 'TUE', courseCode: '241CS019', subjectName: 'API & Micro Services', timeSlot: '09:00 - 10:00', status: 'PRESENT', facultyName: 'Dr. V. Rajesh Kumar' },
+  { id: 'AH-04', date: '2026-09-29', day: 'TUE', courseCode: '241CS019', subjectName: 'API & Micro Services', timeSlot: '09:00 - 10:00', status: 'PRESENT', facultyName: 'Kumari' },
   { id: 'AH-05', date: '2026-09-29', day: 'TUE', courseCode: '241AI025', subjectName: 'Computer Vision', timeSlot: '10:00 - 11:00', status: 'PRESENT', facultyName: 'Dr. M. Venkata Reddy' },
   { id: 'AH-06', date: '2026-09-29', day: 'TUE', courseCode: '241CS017', subjectName: 'OOAD & UML', timeSlot: '11:15 - 12:15', status: 'PRESENT', facultyName: 'Sunkavilli Vijaya Nirmala' },
   { id: 'AH-07', date: '2026-09-28', day: 'MON', courseCode: '241CS015', subjectName: 'Computer Networks', timeSlot: '09:00 - 10:00', status: 'PRESENT', facultyName: 'Smt. P. Hema Latha' },
@@ -281,8 +281,8 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   },
   {
     id: 'NOTIF-02',
-    title: 'Next Class Alert: OOAD & UML',
-    message: 'Your next class OOAD & UML starts at 10:00 AM in Room CSE-204 with Sunkavilli Vijaya Nirmala.',
+    title: 'Next Class Alert: API & Micro Services',
+    message: 'Your next class API & Micro Services starts at 10:00 AM in Room CSE-204 with Kumari.',
     timestamp: '40 mins ago',
     severity: 'INFO',
     read: false,
@@ -329,12 +329,12 @@ export const FACULTY_DIRECTORY: FacultyMember[] = [
   },
   {
     id: 'FAC-103',
-    name: 'Dr. V. Rajesh Kumar',
+    name: 'Kumari',
     department: 'Computer Science & Engineering',
-    designation: 'Professor',
-    email: 'rajesh.kumar@adityauniversity.in',
+    designation: 'Assistant Professor',
+    email: 'kumari@adityauniversity.in',
     roomNumber: 'Cabin CSE-215, Ramanujan Block',
-    subjectsTaught: ['API & Micro Services', 'Cloud Native Systems']
+    subjectsTaught: ['API & Micro Services', 'API & Micro Services Lab']
   },
   {
     id: 'FAC-104',

@@ -206,7 +206,7 @@ class ApiService {
       { id: 'LOG-1', timestamp: '2026-09-30 09:15:22', userEmail: 'rishi.24b11ai051@aditya.ac.in', action: 'LOGIN', details: 'User authenticated successfully', ipAddress: '10.20.14.88' },
       { id: 'LOG-2', timestamp: '2026-09-30 09:16:04', userEmail: 'rishi.24b11ai051@aditya.ac.in', action: 'PREDICTION_REQUEST', details: 'Linear regression model executed for student 24B11AI051', ipAddress: '10.20.14.88' },
       { id: 'LOG-3', timestamp: '2026-09-30 09:20:11', userEmail: 'rishi.24b11ai051@aditya.ac.in', action: 'ATTENDANCE_SIMULATION', details: 'What-if projection calculated for Soft Computing', ipAddress: '10.20.14.88' },
-      { id: 'LOG-4', timestamp: '2026-09-29 16:45:00', userEmail: 'nirmala.faculty@aditya.ac.in', action: 'ATTENDANCE_UPDATE', details: 'Batch attendance posted for Section A (OOAD & UML)', ipAddress: '10.20.12.10' }
+      { id: 'LOG-4', timestamp: '2026-09-29 16:45:00', userEmail: 'nirmala.faculty@aditya.ac.in', action: 'ATTENDANCE_UPDATE', details: 'Batch attendance posted for Section A (API & Micro Services)', ipAddress: '10.20.12.10' }
     ];
   }
 

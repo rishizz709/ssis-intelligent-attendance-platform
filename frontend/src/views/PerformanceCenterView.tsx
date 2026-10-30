@@ -49,7 +49,7 @@ export const PerformanceCenterView: React.FC = () => {
     { attendance: 77.8, score: 84, subject: 'Web Technologies' },
     { attendance: 78.6, score: 85, subject: 'Data Mining' },
     { attendance: 80.0, score: 88, subject: 'AI Ethics' },
-    { attendance: 80.7, score: 90, subject: 'Cloud Computing' }
+    { attendance: 80.7, score: 90, subject: 'API & Micro Services' }
   ];
 
   return (

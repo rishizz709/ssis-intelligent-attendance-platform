@@ -130,7 +130,7 @@ public class StudentResultEndpoint {
                     {"241CS017", "OOAD & UML", "36", "40", "A", "4"},
                     {"241AI021", "Machine Learning", "38", "40", "A+", "4"},
                     {"241AI023", "Deep Learning", "35", "40", "A", "3"},
-                    {"241CS019", "Cloud Computing", "39", "40", "O", "3"}
+                    {"241CS019", "API & Micro Services", "39", "40", "O", "3"}
             };
 
             for (String[] c : sampleCourses) {

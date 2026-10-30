@@ -49,7 +49,7 @@ public class AttendanceController {
     @Operation(summary = "Calculate immediate impact of attending or missing next class")
     public ResponseEntity<ProjectionResponseDto> nextClassProjection(
             @PathVariable String rollNumber,
-            @RequestParam(defaultValue = "241CS017") String courseCode,
+            @RequestParam(defaultValue = "241CS019") String courseCode,
             @RequestParam(defaultValue = "true") boolean attend) {
         return ResponseEntity.ok(attendanceService.simulateNextClassDecision(rollNumber, courseCode, attend));
     }

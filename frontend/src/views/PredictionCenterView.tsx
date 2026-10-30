@@ -339,10 +339,10 @@ export const PredictionCenterView: React.FC = () => {
 
             <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950 space-y-1">
               <div className="font-bold flex items-center gap-1.5 text-blue-900">
-                <CheckCircle2 className="w-4 h-4 text-blue-700" /> Maintain Cloud Computing Buffer
+                <CheckCircle2 className="w-4 h-4 text-blue-700" /> Excel in API & Micro Services
               </div>
               <p>
-                Cloud Computing is safely at 80.70% with 4 safe bunks available. Preserve these for exam preparation week rather than casual bunks.
+                API & Micro Services (241CS019) under Kumari is in strong standing. Sustain perfect attendance to secure full internal marks and capstone honors.
               </p>
             </div>
 

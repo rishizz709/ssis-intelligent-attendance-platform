@@ -183,7 +183,7 @@ export const Sidebar: React.FC = () => {
           >
             <div className="flex items-center justify-between text-xs">
               <span className="font-bold text-purple-950 font-display truncate">
-                {user?.name || 'Dr. S. Vijaya Nirmala'}
+                {user?.name || 'Kumari'}
               </span>
               <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-purple-100 text-purple-800">
                 FACULTY

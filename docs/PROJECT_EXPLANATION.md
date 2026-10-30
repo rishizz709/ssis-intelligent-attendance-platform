@@ -27,10 +27,10 @@ Unlike conventional, clunky university ERP systems that only display static tabu
   - **Status:** **EXAM ELIGIBLE** (+1.96% above 75% University Threshold)
 
 ### Faculty Persona:
-- **Name:** Sunkavilli Vijaya Nirmala
+- **Name:** Kumari
 - **Department:** Computer Science & Engineering
-- **Course In-charge:** `241CS017` — Object-Oriented Analysis & Design (OOAD & UML)
-- **Role:** Roll Call Marker & Syllabus Coordinator
+- **Course In-charge:** `241CS019` — API & Micro Services
+- **Role:** Roll Call Marker & Subject Coordinator
 
 ### Administrative Persona:
 - **Role:** Dean of Academic Affairs & Super Administrator
@@ -42,7 +42,8 @@ Unlike conventional, clunky university ERP systems that only display static tabu
 
 ### 3.1. Hero "Next Class" Decision Engine
 At any given moment, a student should know the exact mathematical consequence of stepping into or bunking their upcoming class.
-- **Featured Next Class:** `241CS017` — OOAD & UML (10:00 AM – 11:00 AM, CSE-204)
+- **Featured Next Class:** `241CS019` — API & Micro Services (10:00 AM – 11:00 AM, CSE-204)
+- **Faculty Incharge:** Kumari
 - **Current Standing in OOAD:** 40 / 56 Attended (**71.43%** — *Below 75% Condonation Limit*)
 - **Interactive Projections:**
   - **"✓ I'LL ATTEND":** Tally becomes **41 / 57 (71.93%)** — *+0.50% Immediate Gain*, reduces recovery hurdle.

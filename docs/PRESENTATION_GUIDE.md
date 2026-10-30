@@ -10,7 +10,7 @@
 > 
 > *Using mathematical optimization formulas and machine learning trend analysis, a student like **B. Rishi Vardhan** (`24B11AI051`) can log in and immediately see:*
 > 1. *Their exact attendance standing: **334 / 434 (76.96%)** with an 8-class safe bunk margin.*
-> 2. *Their **Hero Next Class** (OOAD & UML at 10:00 AM) with instant projections: attending brings a **+0.50%** gain, while bunking causes a sharp **-1.25%** loss.*
+> 2. *Their **Hero Next Class** (API & Micro Services at 10:00 AM with Kumari) with instant projections: attending brings an immediate gain, while bunking causes a loss.*
 > 3. *A **Target Attendance Planner** that computes exact consecutive classes needed to hit 80%, 85%, or 90%.*
 > 4. *An **AI Prediction Center** forecasting final semester outcome with 95% confidence intervals.*
 > 
@@ -25,7 +25,7 @@
    - Use the **Quick Demo Persona** button to log in as **B. Rishi Vardhan**.
 2. **Slide 2: Flagship Dashboard & Hero Next Class**
    - Point out the 4 primary KPI cards: 76.96%, 334 attended, 434 held, 82% academic average.
-   - Click the interactive **"✓ I'LL ATTEND"** button on the OOAD & UML hero card.
+   - Click the interactive **"✓ I'LL ATTEND"** button on the API & Micro Services hero card.
    - Show how the live percentage instantly reacts and recalculates!
 3. **Slide 3: Smart Target Simulator & Chart**
    - Move the target slider from 75% to 85%.

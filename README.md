@@ -10,9 +10,10 @@ SSIS is a production-quality full-stack academic intelligence platform built for
 
 - **Lead Student Persona:** B. Rishi Vardhan (`24B11AI051`)
 - **Degree:** B.Tech AI & ML (5th Semester, Section A)
+- **Project Subject:** API & Micro Services (`241CS019`) — Faculty: Kumari
 - **Current Attendance:** **334 / 434 (76.96%)** — Exam Eligible (+8 Safe Bunk Buffer)
 - **Academic Score:** **82.00% Average** (Projected SGPA: 8.64, CGPA: 8.58)
-- **Hero Next Class:** OOAD & UML (`241CS017`) at 10:00 AM in CSE-204 with Sunkavilli Vijaya Nirmala
+- **Hero Next Class:** API & Micro Services (`241CS019`) at 10:00 AM in CSE-204 with Kumari
 
 ---
 

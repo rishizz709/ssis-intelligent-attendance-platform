@@ -197,7 +197,7 @@ export const GlobalSearchModal: React.FC<GlobalSearchModalProps> = ({ isOpen, on
 
           {filteredNav.length === 0 && filteredSubjects.length === 0 && filteredFaculty.length === 0 && (
             <div className="p-8 text-center text-xs text-slate-400">
-              No results found for "{query}". Try searching for "OOAD", "Timetable", "Report", or "Rao".
+              No results found for "{query}". Try searching for "API", "Timetable", "Report", or "Kumari".
             </div>
           )}
         </div>

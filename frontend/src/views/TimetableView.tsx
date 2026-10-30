@@ -37,8 +37,8 @@ export const TimetableView: React.FC = () => {
     const sampleHeaders = 'dayOfWeek,period,timeSlot,courseCode,subjectName,facultyName,room,type\n';
     const sampleRows = [
       'Monday,1,09:00 AM - 10:00 AM,241CS018,Machine Learning,Dr. K. S. Rao,CSE-204,LECTURE',
-      'Monday,2,10:00 AM - 11:00 AM,241CS017,OOAD & UML,Sunkavilli Vijaya Nirmala,CSE-204,LECTURE',
-      'Monday,3,11:15 AM - 12:15 PM,241CS019,Cloud Computing,Dr. P. Rajesh,LAB-3,LAB',
+      'Monday,2,10:00 AM - 11:00 AM,241CS019,API & Micro Services,Kumari,CSE-204,LECTURE',
+      'Monday,3,11:15 AM - 12:15 PM,241CS019,API & Micro Services Lab,Kumari,Lab-4,LAB',
       'Tuesday,1,09:00 AM - 10:00 AM,241CS020,Deep Learning,Dr. M. Swetha,CSE-204,LECTURE'
     ].join('\n');
 
@@ -184,7 +184,7 @@ export const TimetableView: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredEntries.map(entry => {
           const isLab = entry.type === 'LAB';
-          const isNextHero = entry.courseCode === '241CS017' && entry.period === 2 && entry.dayOfWeek === 'Monday';
+          const isNextHero = (entry.courseCode === '241CS019' || entry.courseCode === '241cs019') && entry.period === 2 && (entry.dayOfWeek.toUpperCase() === 'MONDAY');
 
           return (
             <div 
@@ -315,7 +315,7 @@ export const TimetableView: React.FC = () => {
                   rows={6}
                   value={csvContent}
                   onChange={(e) => handleCsvPasteOrUpload(e.target.value)}
-                  placeholder="dayOfWeek,period,timeSlot,courseCode,subjectName,facultyName,room,type&#10;Monday,1,09:00 AM - 10:00 AM,241CS018,Machine Learning,Dr. K. S. Rao,CSE-204,LECTURE&#10;Monday,2,10:00 AM - 11:00 AM,241CS017,OOAD & UML,Sunkavilli Vijaya Nirmala,CSE-204,LECTURE"
+                  placeholder="dayOfWeek,period,timeSlot,courseCode,subjectName,facultyName,room,type&#10;Monday,1,09:00 AM - 10:00 AM,241CS018,Machine Learning,Dr. K. S. Rao,CSE-204,LECTURE&#10;Monday,2,10:00 AM - 11:00 AM,241CS019,API & Micro Services,Kumari,CSE-204,LECTURE"
                   className="w-full p-3 rounded-2xl border border-slate-300 text-xs font-mono text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 ></textarea>
               </div>

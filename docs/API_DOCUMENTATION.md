@@ -75,22 +75,22 @@ OpenAPI JSON: `http://localhost:8080/api-docs`
 ```
 
 ### 1.3. Hero Next Class Immediate Projection
-- **Endpoint:** `GET /next-class-projection/{rollNumber}?courseCode=241CS017&attend=true`
+- **Endpoint:** `GET /next-class-projection/{rollNumber}?courseCode=241CS019&attend=true`
 - **Response (200 OK):**
 ```json
 {
-  "courseCode": "241CS017",
-  "courseName": "OOAD & UML",
-  "currentAttended": 40,
-  "currentHeld": 56,
-  "currentPercentage": 71.43,
-  "projectedAttended": 41,
-  "projectedHeld": 57,
-  "projectedPercentage": 71.93,
-  "deltaPercentage": 0.50,
-  "classesNeededForTarget": 9,
-  "safeBunksAllowed": 0,
-  "impactSummary": "Gain of +0.50% (Reaches 71.93%). Safe bunks: 0"
+  "courseCode": "241CS019",
+  "courseName": "API & Micro Services",
+  "currentAttended": 46,
+  "currentHeld": 57,
+  "currentPercentage": 80.70,
+  "projectedAttended": 47,
+  "projectedHeld": 58,
+  "projectedPercentage": 81.03,
+  "deltaPercentage": 0.33,
+  "classesNeededForTarget": 0,
+  "safeBunksAllowed": 4,
+  "impactSummary": "Gain of +0.33% (Reaches 81.03%). Safe bunks: 4"
 }
 ```
 
@@ -111,9 +111,9 @@ OpenAPI JSON: `http://localhost:8080/api-docs`
   "dayOfWeek": "MONDAY",
   "period": 2,
   "timeSlot": "10:00 AM - 11:00 AM",
-  "courseCode": "241CS017",
-  "subjectName": "OOAD & UML",
-  "facultyName": "Sunkavilli Vijaya Nirmala",
+  "courseCode": "241CS019",
+  "subjectName": "API & Micro Services",
+  "facultyName": "Kumari",
   "room": "CSE-204",
   "type": "THEORY"
 }

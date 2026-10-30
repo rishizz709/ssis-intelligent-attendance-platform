@@ -74,7 +74,7 @@ Send an `HTTP POST` request to `http://localhost:8080/ws` with `Content-Type: te
          </results>
          <results>
             <courseCode>241CS019</courseCode>
-            <courseName>Cloud Computing</courseName>
+            <courseName>API &amp; Micro Services</courseName>
             <internalMarks>39</internalMarks>
             <maxMarks>40</maxMarks>
             <grade>O</grade>

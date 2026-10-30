@@ -14,7 +14,7 @@ VALUES
 (1, 'FAC-017', 'Sunkavilli Vijaya Nirmala', 'nirmala.sv@aditya.ac.in', 'Computer Science & Engineering', 'Associate Professor', 'Cabin CSE-304, Ramanujan Block', 'Mon/Wed 3:30 PM - 4:30 PM', 'OOAD & UML'),
 (2, 'FAC-021', 'Dr. Ch. Srinivas Rao', 'srinivas.rao@aditya.ac.in', 'AI & Machine Learning', 'Professor & HOD', 'Cabin AI-301, Ramanujan Block', 'Tue/Thu 2:00 PM - 4:00 PM', 'Machine Learning'),
 (3, 'FAC-023', 'Dr. M. Swetha', 'swetha.m@aditya.ac.in', 'AI & Machine Learning', 'Associate Professor', 'Cabin AI-204, Aryabhatta Block', 'Mon/Fri 11:00 AM - 12:00 PM', 'Deep Learning'),
-(4, 'FAC-019', 'Dr. P. Rajesh Kumar', 'rajesh.p@aditya.ac.in', 'Computer Science & Engineering', 'Associate Professor', 'Cabin CSE-208, Ramanujan Block', 'Wed/Fri 10:00 AM - 11:30 AM', 'Cloud Computing');
+(4, 'FAC-019', 'Kumari', 'kumari@aditya.ac.in', 'Computer Science & Engineering', 'Assistant Professor', 'Cabin CSE-208, Ramanujan Block', 'Wed/Fri 10:00 AM - 11:30 AM', 'API & Micro Services');
 
 -- 3. Insert Courses
 INSERT INTO courses (id, course_code, course_name, short_name, credits, semester, department, is_elective)
@@ -22,7 +22,7 @@ VALUES
 (1, '241CS017', 'OOAD & UML', 'OOAD', 4, 5, 'CSE', FALSE),
 (2, '241AI021', 'Machine Learning', 'ML', 4, 5, 'AI&ML', FALSE),
 (3, '241AI023', 'Deep Learning', 'DL', 3, 5, 'AI&ML', FALSE),
-(4, '241CS019', 'Cloud Computing', 'CC', 3, 5, 'CSE', FALSE),
+(4, '241CS019', 'API & Micro Services', 'API', 3, 5, 'CSE', FALSE),
 (5, '241CS015', 'Computer Networks', 'CN', 3, 5, 'CSE', FALSE),
 (6, '241CS016', 'Compiler Design', 'CD', 3, 5, 'CSE', FALSE),
 (7, '241CS020', 'Web Technologies', 'WT', 3, 5, 'CSE', FALSE),
@@ -45,7 +45,7 @@ VALUES
 INSERT INTO timetable_entries (id, day_of_week, period, start_time, end_time, course_id, faculty_id, room_number, type, section)
 VALUES 
 (1, 'MONDAY', 1, '09:00', '10:00', 5, 1, 'CSE-202', 'THEORY', 'A'),
-(2, 'MONDAY', 2, '10:00', '11:00', 1, 1, 'CSE-204', 'THEORY', 'A'), -- HERO NEXT CLASS
+(2, 'MONDAY', 2, '10:00', '11:00', 4, 4, 'CSE-204', 'THEORY', 'A'), -- HERO NEXT CLASS: API & Micro Services with Kumari
 (3, 'MONDAY', 3, '11:15', '12:15', 2, 2, 'AI-101', 'THEORY', 'A'),
 (4, 'MONDAY', 4, '13:00', '15:00', 4, 4, 'Lab-4', 'LAB', 'A'),
 (5, 'TUESDAY', 1, '09:00', '10:00', 4, 4, 'AI-102', 'THEORY', 'A'),
@@ -67,6 +67,6 @@ VALUES
 -- 7. Insert Notifications
 INSERT INTO notifications (id, student_id, title, message, severity, category, is_read, action_url, created_at)
 VALUES 
-(1, 1, 'Upcoming Class: OOAD & UML', 'Period 2 at 10:00 AM in CSE-204 with Sunkavilli Vijaya Nirmala. Critical attendance impact.', 'WARNING', 'CLASS', FALSE, '/dashboard', CURRENT_TIMESTAMP),
+(1, 1, 'Upcoming Class: API & Micro Services', 'Period 2 at 10:00 AM in CSE-204 with Kumari. Active attendance impact.', 'INFO', 'CLASS', FALSE, '/dashboard', CURRENT_TIMESTAMP),
 (2, 1, 'Attendance Deficit Notice', 'OOAD & UML is at 71.43% (Below 75.00%). Must attend next 9 classes to clear examination eligibility.', 'CRITICAL', 'ATTENDANCE', FALSE, '/dashboard', CURRENT_TIMESTAMP),
 (3, 1, 'Mid-Semester Results Published', 'Internal evaluation scores for 5th semester uploaded. Current Academic Average: 82%.', 'SUCCESS', 'EXAM', TRUE, '/performance', CURRENT_TIMESTAMP);

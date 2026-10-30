@@ -40,7 +40,7 @@ export const ProfileView: React.FC = () => {
                 </span>
                 <span className="text-xs text-purple-200">ID: {user?.facultyId || 'FAC-201'}</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-black text-white mt-1">{user?.name || 'Dr. S. Vijaya Nirmala'}</h1>
+              <h1 className="text-2xl sm:text-3xl font-black text-white mt-1">{user?.name || 'Kumari'}</h1>
               <p className="text-xs text-purple-200/80">
                 Department of {user?.department || 'Computer Science & Engineering'} • Aditya University
               </p>
@@ -51,7 +51,7 @@ export const ProfileView: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center">
               <div className="text-[10px] text-purple-200 uppercase font-bold">Assigned Courses</div>
               <div className="text-2xl font-black text-white mt-0.5">2 Courses</div>
-              <div className="text-[10px] text-purple-300">OOAD & UML • SWE</div>
+              <div className="text-[10px] text-purple-300">API & Micro Services • Lab</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center">
               <div className="text-[10px] text-purple-200 uppercase font-bold">Designation</div>
@@ -85,12 +85,12 @@ export const ProfileView: React.FC = () => {
 
               <div className="my-5 flex items-center space-x-4">
                 <div className="w-20 h-24 rounded-2xl bg-gradient-to-b from-purple-800 to-indigo-900 border-2 border-white/30 flex items-center justify-center text-white font-black text-2xl shadow-inner shrink-0">
-                  {user?.name?.split(' ').map((n: string) => n[0]).slice(0, 2).join('') || 'VN'}
+                  {user?.name?.slice(0, 2).toUpperCase() || 'KM'}
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-black text-base text-white tracking-wide">{user?.name || 'Dr. S. Vijaya Nirmala'}</h3>
+                  <h3 className="font-black text-base text-white tracking-wide">{user?.name || 'Kumari'}</h3>
                   <div className="text-xs font-mono font-bold text-purple-400">{user?.facultyId || 'FAC-201'}</div>
-                  <div className="text-[11px] text-slate-300 font-medium">Associate Professor</div>
+                  <div className="text-[11px] text-slate-300 font-medium">Assistant Professor</div>
                   <div className="text-[10px] text-purple-200">Dept. of {user?.department || 'Computer Science & Engineering'}</div>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export const ProfileView: React.FC = () => {
               <div className="pt-3 border-t border-purple-800/80 flex items-center justify-between text-xs">
                 <div className="space-y-0.5">
                   <div className="text-[9px] text-slate-400 uppercase">Official Email</div>
-                  <div className="font-mono text-[11px] text-white">{user?.email || 'vijayanirmala@adityauniversity.in'}</div>
+                  <div className="font-mono text-[11px] text-white">{user?.email || 'kumari@adityauniversity.in'}</div>
                 </div>
                 <div className="w-10 h-10 bg-white p-1 rounded-lg">
                   <QrCode className="w-full h-full text-slate-900" />
@@ -114,7 +114,7 @@ export const ProfileView: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
                   <span className="text-slate-400 font-bold text-[10px] uppercase block">Faculty Name</span>
-                  <span className="font-extrabold text-slate-900 text-sm mt-0.5 block">{user?.name || 'Dr. S. Vijaya Nirmala'}</span>
+                  <span className="font-extrabold text-slate-900 text-sm mt-0.5 block">{user?.name || 'Kumari'}</span>
                 </div>
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
                   <span className="text-slate-400 font-bold text-[10px] uppercase block">Faculty ID</span>
@@ -130,11 +130,11 @@ export const ProfileView: React.FC = () => {
                 </div>
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
                   <span className="text-slate-400 font-bold text-[10px] uppercase block">Cabin / Office</span>
-                  <span className="font-bold text-slate-800 mt-0.5 block">Cabin CSE-304, Ramanujan Block</span>
+                  <span className="font-bold text-slate-800 mt-0.5 block">Cabin CSE-215, Ramanujan Block</span>
                 </div>
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
                   <span className="text-slate-400 font-bold text-[10px] uppercase block">Primary Course Assigned</span>
-                  <span className="font-bold text-purple-900 mt-0.5 block">241CS017 - OOAD & UML (Sec A)</span>
+                  <span className="font-bold text-purple-900 mt-0.5 block">241CS019 - API & Micro Services (Sec A)</span>
                 </div>
               </div>
             </div>

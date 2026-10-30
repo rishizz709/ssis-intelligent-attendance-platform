@@ -50,7 +50,7 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
   );
 
   // Next class subject data
-  const nextSubjectData = subjectAttendance.find(s => s.courseCode === (nextClass?.courseCode || '241CS017')) || subjectAttendance[0];
+  const nextSubjectData = subjectAttendance.find(s => s.courseCode === (nextClass?.courseCode || '241CS019')) || subjectAttendance[0];
 
   // Dynamic calculations for Next Class
   const nextAttendProjection = calculateSubjectProjection(
@@ -104,7 +104,7 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
   // Handle Next Class quick action simulation
   const handleNextClassAction = (action: 'attend' | 'miss') => {
     setNextClassSimulatedAction(action);
-    simulateAttendance(nextSubjectData?.id || nextSubjectData?.courseCode || '241CS017', action);
+    simulateAttendance(nextSubjectData?.id || nextSubjectData?.courseCode || '241CS019', action);
     setActionFeedback(
       action === 'attend' 
         ? `Simulated: Attended ${nextSubjectData.courseCode}! Subject moved to ${nextAttendProjection.projectedPercentage.toFixed(2)}% (+${nextAttendProjection.delta.toFixed(2)}%)`
@@ -310,9 +310,15 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
               <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-blue-100 text-blue-800">
                 Period 2 • 10:00 AM - 11:00 AM
               </span>
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 flex items-center gap-1">
-                <AlertTriangle className="w-3.5 h-3.5 text-amber-700" /> Subject Under 75%
-              </span>
+              {nextSubjectData.percentage < 75 ? (
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950/50 text-amber-900 dark:text-amber-300 flex items-center gap-1 border border-amber-200 dark:border-amber-800">
+                  <AlertTriangle className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" /> Subject Under 75%
+                </span>
+              ) : (
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950/50 text-emerald-900 dark:text-emerald-300 flex items-center gap-1 border border-emerald-200 dark:border-emerald-800">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Exam Eligible (&gt;=75%)
+                </span>
+              )}
             </div>
             <h2 className="text-2xl sm:text-3xl font-black text-blue-950 tracking-tight">
               {nextSubjectData.subjectName}
@@ -336,7 +342,7 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
           <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
             <div>
               <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Current Standing</div>
-              <div className="text-2xl font-black text-rose-600">
+              <div className={`text-2xl font-black ${nextSubjectData.percentage >= 75 ? 'text-emerald-600' : 'text-rose-600'}`}>
                 {nextSubjectData.percentage.toFixed(2)}%
               </div>
               <div className="text-[11px] text-slate-500 font-medium">

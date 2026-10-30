@@ -92,7 +92,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 
         int currentAttended = (record != null) ? record.getClassesAttended() : 40;
         int currentHeld = (record != null) ? record.getClassesHeld() : 56;
-        String courseName = (record != null && record.getCourse() != null) ? record.getCourse().getCourseName() : "OOAD & UML";
+        String courseName = (record != null && record.getCourse() != null) ? record.getCourse().getCourseName() : "API & Micro Services";
 
         int attend = (request.getClassesToAttend() != null) ? request.getClassesToAttend() : 0;
         int miss = (request.getClassesToMiss() != null) ? request.getClassesToMiss() : 0;
