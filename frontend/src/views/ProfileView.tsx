@@ -109,32 +109,32 @@ export const ProfileView: React.FC = () => {
 
           {/* Faculty Academic Profile */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
-              <h2 className="text-base font-bold text-purple-950">Faculty Information</h2>
+            <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-6 transition-colors">
+              <h2 className="text-base font-bold text-purple-950 dark:text-purple-300">Faculty Information</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-slate-400 font-bold text-[10px] uppercase block">Faculty Name</span>
-                  <span className="font-extrabold text-slate-900 text-sm mt-0.5 block">{user?.name || 'Kumari'}</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                  <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Faculty Name</span>
+                  <span className="font-extrabold text-slate-900 dark:text-white text-sm mt-0.5 block">{user?.name || 'Kumari'}</span>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-slate-400 font-bold text-[10px] uppercase block">Faculty ID</span>
-                  <span className="font-mono font-extrabold text-purple-900 text-sm mt-0.5 block">{user?.facultyId || 'FAC-201'}</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                  <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Faculty ID</span>
+                  <span className="font-mono font-extrabold text-purple-900 dark:text-purple-300 text-sm mt-0.5 block">{user?.facultyId || 'FAC-201'}</span>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-slate-400 font-bold text-[10px] uppercase block">Official Email</span>
-                  <span className="font-medium text-slate-800 mt-0.5 block">{user?.email}</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                  <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Official Email</span>
+                  <span className="font-medium text-slate-800 dark:text-slate-200 mt-0.5 block">{user?.email}</span>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-slate-400 font-bold text-[10px] uppercase block">Department</span>
-                  <span className="font-bold text-slate-800 mt-0.5 block">{user?.department || 'Computer Science & Engineering'}</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                  <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Department</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200 mt-0.5 block">{user?.department || 'Computer Science & Engineering'}</span>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-slate-400 font-bold text-[10px] uppercase block">Cabin / Office</span>
-                  <span className="font-bold text-slate-800 mt-0.5 block">Cabin CSE-215, Ramanujan Block</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                  <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Cabin / Office</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200 mt-0.5 block">Cabin CSE-215, Ramanujan Block</span>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <span className="text-slate-400 font-bold text-[10px] uppercase block">Primary Course Assigned</span>
-                  <span className="font-bold text-purple-900 mt-0.5 block">241CS019 - API & Micro Services (Sec A)</span>
+                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                  <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Primary Course Assigned</span>
+                  <span className="font-bold text-purple-900 dark:text-purple-300 mt-0.5 block">241CS019 - API & Micro Services (Sec A)</span>
                 </div>
               </div>
             </div>
@@ -168,24 +168,24 @@ export const ProfileView: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
-          <h2 className="text-base font-bold text-slate-900">Administrator Credentials & System Controls</h2>
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-6 transition-colors">
+          <h2 className="text-base font-bold text-slate-900 dark:text-white">Administrator Credentials & System Controls</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-              <span className="text-slate-400 font-bold text-[10px] uppercase block">Official Title</span>
-              <span className="font-extrabold text-slate-900 text-sm mt-0.5 block">{user?.name || 'Dean Academic Affairs'}</span>
+            <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+              <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Official Title</span>
+              <span className="font-extrabold text-slate-900 dark:text-white text-sm mt-0.5 block">{user?.name || 'Dean Academic Affairs'}</span>
             </div>
-            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-              <span className="text-slate-400 font-bold text-[10px] uppercase block">Administrative Email</span>
-              <span className="font-mono font-extrabold text-blue-900 text-sm mt-0.5 block">{user?.email || 'dean.admin@aditya.ac.in'}</span>
+            <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+              <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Administrative Email</span>
+              <span className="font-mono font-extrabold text-blue-900 dark:text-blue-400 text-sm mt-0.5 block">{user?.email || 'dean.admin@aditya.ac.in'}</span>
             </div>
-            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-              <span className="text-slate-400 font-bold text-[10px] uppercase block">Security Role</span>
-              <span className="font-bold text-emerald-700 mt-0.5 block">ROLE_ADMIN (Full Audit & CRUD Permissions)</span>
+            <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+              <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Security Role</span>
+              <span className="font-bold text-emerald-700 dark:text-emerald-400 mt-0.5 block">ROLE_ADMIN (Full Audit & CRUD Permissions)</span>
             </div>
-            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-              <span className="text-slate-400 font-bold text-[10px] uppercase block">AOP Telemetry Stream</span>
-              <span className="font-bold text-slate-800 mt-0.5 block">Active • Intercepting All Controller Invocations</span>
+            <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+              <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">AOP Telemetry Stream</span>
+              <span className="font-bold text-slate-800 dark:text-slate-200 mt-0.5 block">Active • Intercepting All Controller Invocations</span>
             </div>
           </div>
         </div>
@@ -283,20 +283,20 @@ export const ProfileView: React.FC = () => {
           </div>
 
           {/* Quick Status Badges */}
-          <div className="p-4 rounded-2xl bg-white border border-slate-200 space-y-2.5 text-xs">
+          <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2.5 text-xs transition-colors">
             <div className="flex items-center justify-between">
-              <span className="text-slate-500">Transportation / Bus Route</span>
-              <span className="font-bold text-slate-800 flex items-center gap-1">
-                <Bus className="w-3.5 h-3.5 text-blue-700" /> Route 14 (Kakinada Express)
+              <span className="text-slate-500 dark:text-slate-400">Transportation / Bus Route</span>
+              <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1">
+                <Bus className="w-3.5 h-3.5 text-blue-700 dark:text-blue-400" /> Route 14 (Kakinada Express)
               </span>
             </div>
-            <div className="flex items-center justify-between border-t border-slate-100 pt-2">
-              <span className="text-slate-500">Hostel / Residential</span>
-              <span className="font-bold text-slate-800">Day Scholar</span>
+            <div className="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-2">
+              <span className="text-slate-500 dark:text-slate-400">Hostel / Residential</span>
+              <span className="font-bold text-slate-800 dark:text-slate-200">Day Scholar</span>
             </div>
-            <div className="flex items-center justify-between border-t border-slate-100 pt-2">
-              <span className="text-slate-500">Library Card Status</span>
-              <span className="font-bold text-emerald-600 flex items-center gap-1">
+            <div className="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-2">
+              <span className="text-slate-500 dark:text-slate-400">Library Card Status</span>
+              <span className="font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" /> Active (0 Overdue)
               </span>
             </div>
@@ -305,57 +305,57 @@ export const ProfileView: React.FC = () => {
 
         {/* Right: Academic Records & Contacts */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
-            <h2 className="text-base font-bold text-blue-950">Student Academic Profile</h2>
+          <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-6 transition-colors">
+            <h2 className="text-base font-bold text-blue-950 dark:text-white">Student Academic Profile</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                <span className="text-slate-400 font-bold text-[10px] uppercase block">Full Official Name</span>
-                <span className="font-extrabold text-slate-900 text-sm mt-0.5 block">{user?.name || student.name}</span>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Full Official Name</span>
+                <span className="font-extrabold text-slate-900 dark:text-white text-sm mt-0.5 block">{user?.name || student.name}</span>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                <span className="text-slate-400 font-bold text-[10px] uppercase block">University Registration No</span>
-                <span className="font-mono font-extrabold text-blue-900 text-sm mt-0.5 block">{user?.studentId || student.rollNumber}</span>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">University Registration No</span>
+                <span className="font-mono font-extrabold text-blue-900 dark:text-blue-400 text-sm mt-0.5 block">{user?.studentId || student.rollNumber}</span>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                <span className="text-slate-400 font-bold text-[10px] uppercase block">Official Email</span>
-                <span className="font-medium text-slate-800 mt-0.5 block">{user?.email || student.email}</span>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Official Email</span>
+                <span className="font-medium text-slate-800 dark:text-slate-200 mt-0.5 block">{user?.email || student.email}</span>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                <span className="text-slate-400 font-bold text-[10px] uppercase block">Degree Program</span>
-                <span className="font-bold text-slate-800 mt-0.5 block">{student.program}</span>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Degree Program</span>
+                <span className="font-bold text-slate-800 dark:text-slate-200 mt-0.5 block">{student.program}</span>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                <span className="text-slate-400 font-bold text-[10px] uppercase block">Current Semester</span>
-                <span className="font-bold text-slate-800 mt-0.5 block">{student.semester} - Section {student.section}</span>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Current Semester</span>
+                <span className="font-bold text-slate-800 dark:text-slate-200 mt-0.5 block">{student.semester} - Section {student.section}</span>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
-                <span className="text-slate-400 font-bold text-[10px] uppercase block">Academic Mentor / Proctor</span>
-                <span className="font-bold text-blue-900 mt-0.5 block">Dr. K. S. Rao (Cabin 302)</span>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+                <span className="text-slate-400 dark:text-slate-500 font-bold text-[10px] uppercase block">Academic Mentor / Proctor</span>
+                <span className="font-bold text-blue-900 dark:text-blue-400 mt-0.5 block">Dr. K. S. Rao (Cabin 302)</span>
               </div>
             </div>
 
             {/* Notification Preferences */}
-            <div className="border-t border-slate-200 pt-5 space-y-3">
-              <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <div className="border-t border-slate-200 dark:border-slate-800 pt-5 space-y-3">
+              <h3 className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                 Automated Attendance & Performance Alerts
               </h3>
-              <div className="space-y-2 text-xs text-slate-700">
+              <div className="space-y-2 text-xs text-slate-700 dark:text-slate-300">
                 <label className="flex items-center space-x-2.5">
-                  <input type="checkbox" defaultChecked className="rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+                  <input type="checkbox" defaultChecked className="rounded border-slate-300 dark:border-slate-700 text-blue-600 focus:ring-blue-500 bg-white dark:bg-slate-800" />
                   <span>Receive WhatsApp alert when attendance falls below 75% threshold in any subject</span>
                 </label>
                 <label className="flex items-center space-x-2.5">
-                  <input type="checkbox" defaultChecked className="rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+                  <input type="checkbox" defaultChecked className="rounded border-slate-300 dark:border-slate-700 text-blue-600 focus:ring-blue-500 bg-white dark:bg-slate-800" />
                   <span>Send daily morning timetable schedule alert at 08:00 AM IST</span>
                 </label>
                 <label className="flex items-center space-x-2.5">
-                  <input type="checkbox" defaultChecked className="rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+                  <input type="checkbox" defaultChecked className="rounded border-slate-300 dark:border-slate-700 text-blue-600 focus:ring-blue-500 bg-white dark:bg-slate-800" />
                   <span>Monthly consolidated report dispatch to parent email</span>
                 </label>
               </div>

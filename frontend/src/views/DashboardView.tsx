@@ -195,24 +195,24 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
       {/* 4 PRIMARY KPI METRIC CARDS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Metric 1: Overall Attendance */}
-        <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Overall Attendance</span>
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Overall Attendance</span>
             <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-              overallStats.overallPercentage >= 75 ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+              overallStats.overallPercentage >= 75 ? 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300' : 'bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300'
             }`}>
               {overallStats.overallPercentage >= 75 ? 'ELIGIBLE' : 'CONDONATION'}
             </span>
           </div>
           <div className="mt-3 flex items-baseline justify-between">
-            <div className="text-3xl font-black text-slate-900 tracking-tight">
+            <div className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">
               {overallStats.overallPercentage.toFixed(2)}%
             </div>
-            <div className="text-xs font-semibold text-emerald-600 flex items-center">
+            <div className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center">
               <TrendingUp className="w-4 h-4 mr-0.5" /> +1.96%
             </div>
           </div>
-          <div className="mt-3 w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+          <div className="mt-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2.5 overflow-hidden">
             <div 
               className={`h-full rounded-full transition-all duration-500 ${
                 overallStats.overallPercentage >= 75 ? 'bg-gradient-to-r from-blue-600 to-emerald-500' : 'bg-rose-500'
@@ -220,78 +220,78 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
               style={{ width: `${Math.min(100, overallStats.overallPercentage)}%` }}
             ></div>
           </div>
-          <p className="text-[11px] text-slate-500 mt-2 flex items-center justify-between">
+          <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-2 flex items-center justify-between">
             <span>Minimum 75.00% Required</span>
-            <span className="font-semibold text-blue-900">334 / 434 total</span>
+            <span className="font-semibold text-blue-900 dark:text-blue-400">334 / 434 total</span>
           </p>
         </div>
 
         {/* Metric 2: Classes Attended */}
-        <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Classes Attended</span>
-            <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center">
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Classes Attended</span>
+            <div className="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 flex items-center justify-center">
               <CheckCircle2 className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-3 flex items-baseline justify-between">
-            <div className="text-3xl font-black text-blue-950 tracking-tight">
+            <div className="text-3xl font-black text-blue-950 dark:text-white tracking-tight">
               {overallStats.totalAttended}
             </div>
-            <span className="text-xs font-medium text-slate-500">out of {overallStats.totalHeld}</span>
+            <span className="text-xs font-medium text-slate-500 dark:text-slate-400">out of {overallStats.totalHeld}</span>
           </div>
-          <p className="text-xs text-slate-600 mt-3 font-medium">
-            Classes Missed: <span className="font-bold text-rose-600">{overallStats.totalMissed}</span> (23.04%)
+          <p className="text-xs text-slate-600 dark:text-slate-300 mt-3 font-medium">
+            Classes Missed: <span className="font-bold text-rose-600 dark:text-rose-400">{overallStats.totalMissed}</span> (23.04%)
           </p>
-          <div className="mt-2 text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
+          <div className="mt-2 text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
             <CheckCircle2 className="w-3.5 h-3.5" /> High regular attendance velocity
           </div>
         </div>
 
         {/* Metric 3: Safe Bunk Buffer */}
-        <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Safe Bunk Allowance</span>
-            <div className="w-8 h-8 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center">
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Safe Bunk Allowance</span>
+            <div className="w-8 h-8 rounded-xl bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-300 flex items-center justify-center">
               <ShieldAlert className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-3 flex items-baseline justify-between">
-            <div className="text-3xl font-black text-orange-600 tracking-tight">
+            <div className="text-3xl font-black text-orange-600 dark:text-orange-400 tracking-tight">
               {overallStats.classesCanMiss} Classes
             </div>
-            <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-orange-100 text-orange-800">
+            <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-orange-100 dark:bg-orange-950/80 text-orange-800 dark:text-orange-300">
               Safe Margin
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-3 font-medium">
-            You can skip up to <strong className="text-slate-900">{overallStats.classesCanMiss} classes</strong> consecutively and still maintain ≥75.00%.
+          <p className="text-xs text-slate-600 dark:text-slate-300 mt-3 font-medium">
+            You can skip up to <strong className="text-slate-900 dark:text-white">{overallStats.classesCanMiss} classes</strong> consecutively and still maintain ≥75.00%.
           </p>
-          <div className="mt-2 text-[11px] text-slate-400">
+          <div className="mt-2 text-[11px] text-slate-400 dark:text-slate-500">
             Formula: ⌊(100×334 - 75×434) / 75⌋ = 8
           </div>
         </div>
 
         {/* Metric 4: Academic Performance */}
-        <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+        <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Academic Score</span>
-            <div className="w-8 h-8 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center">
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Academic Score</span>
+            <div className="w-8 h-8 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 flex items-center justify-center">
               <BarChart2 className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-3 flex items-baseline justify-between">
-            <div className="text-3xl font-black text-purple-950 tracking-tight">
+            <div className="text-3xl font-black text-purple-950 dark:text-white tracking-tight">
               82.00%
             </div>
-            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800">
+            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300">
               SGPA 8.64
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-3 font-medium">
-            Cumulative GPA: <strong className="text-slate-900">8.58 CGPA</strong>
+          <p className="text-xs text-slate-600 dark:text-slate-300 mt-3 font-medium">
+            Cumulative GPA: <strong className="text-slate-900 dark:text-white">8.58 CGPA</strong>
           </p>
-          <div className="mt-2 text-[11px] text-purple-700 font-semibold">
+          <div className="mt-2 text-[11px] text-purple-700 dark:text-purple-400 font-semibold">
             Top 5% in 5th Semester AI & ML
           </div>
         </div>
@@ -300,14 +300,14 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
       {/* ============================================================== */}
       {/* FLAGSHIP HERO NEXT CLASS COMPONENT */}
       {/* ============================================================== */}
-      <div className="bg-gradient-to-br from-white to-blue-50/40 rounded-3xl border-2 border-blue-200/80 p-6 sm:p-8 shadow-xl shadow-blue-900/5 relative overflow-hidden">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-blue-100">
+      <div className="bg-gradient-to-br from-white to-blue-50/40 dark:from-slate-900 dark:to-slate-850 rounded-3xl border-2 border-blue-200/80 dark:border-slate-800 p-6 sm:p-8 shadow-xl shadow-blue-900/5 relative overflow-hidden transition-all">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-blue-100 dark:border-slate-800">
           <div>
             <div className="flex items-center gap-2 mb-1.5">
               <span className="text-[11px] font-black px-2.5 py-0.5 rounded-full bg-orange-500 text-white uppercase tracking-wider animate-pulse">
                 HERO: NEXT CLASS
               </span>
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-blue-100 text-blue-800">
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300">
                 Period 2 • 10:00 AM - 11:00 AM
               </span>
               {nextSubjectData.percentage < 75 ? (
@@ -320,71 +320,77 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
                 </span>
               )}
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-blue-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-blue-950 dark:text-white tracking-tight">
               {nextSubjectData.subjectName}
             </h2>
-            <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600 mt-2 font-medium">
-              <span className="flex items-center gap-1 font-mono font-bold text-blue-900">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600 dark:text-slate-300 mt-2 font-medium">
+              <span className="flex items-center gap-1 font-mono font-bold text-blue-900 dark:text-blue-400">
                 <BookOpen className="w-3.5 h-3.5 text-orange-500" /> Code: {nextSubjectData.courseCode}
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1 text-slate-700">
-                <User className="w-3.5 h-3.5 text-blue-700" /> Faculty: {nextSubjectData.facultyName}
+              <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+                <User className="w-3.5 h-3.5 text-blue-700 dark:text-blue-400" /> Faculty: {nextSubjectData.facultyName}
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1 text-slate-700">
-                <MapPin className="w-3.5 h-3.5 text-blue-700" /> Room: {nextSubjectData.room}
+              <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+                <MapPin className="w-3.5 h-3.5 text-blue-700 dark:text-blue-400" /> Room: {nextSubjectData.room}
               </span>
             </div>
           </div>
 
           {/* Current Subject Standing */}
-          <div className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+          <div className="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
             <div>
-              <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Current Standing</div>
-              <div className={`text-2xl font-black ${nextSubjectData.percentage >= 75 ? 'text-emerald-600' : 'text-rose-600'}`}>
+              <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Current Standing</div>
+              <div className={`text-2xl font-black ${nextSubjectData.percentage >= 75 ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
                 {nextSubjectData.percentage.toFixed(2)}%
               </div>
-              <div className="text-[11px] text-slate-500 font-medium">
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
                 {nextSubjectData.attended} / {nextSubjectData.totalHeld} classes attended
               </div>
             </div>
-            <div className="w-12 h-12 rounded-2xl bg-rose-50 border border-rose-200 text-rose-600 flex items-center justify-center font-bold text-xs text-center p-1 leading-tight">
-              Need 9 More
-            </div>
+            {nextSubjectData.percentage < 75 ? (
+              <div className="w-12 h-12 rounded-2xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-900 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-xs text-center p-1 leading-tight">
+                Deficit Alert
+              </div>
+            ) : (
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-900 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs text-center p-1 leading-tight">
+                Safe Standing
+              </div>
+            )}
           </div>
         </div>
 
         {/* Dynamic Dual Projection Cards */}
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* OPTION 1: "✓ I'LL ATTEND" */}
-          <div className="p-5 rounded-2xl bg-white border-2 border-emerald-200 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group">
+          <div className="p-5 rounded-2xl bg-white dark:bg-slate-800 border-2 border-emerald-200 dark:border-emerald-800/80 shadow-sm hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-md transition-all group">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <div className="w-7 h-7 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold text-sm">
                   ✓
                 </div>
-                <span className="text-xs font-extrabold text-emerald-900 uppercase tracking-wider">
+                <span className="text-xs font-extrabold text-emerald-900 dark:text-emerald-300 uppercase tracking-wider">
                   If You Attend This Class
                 </span>
               </div>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
-                +0.50% GAIN
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">
+                +{nextAttendProjection.delta.toFixed(2)}% GAIN
               </span>
             </div>
 
             <div className="mt-4 flex items-baseline justify-between">
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-emerald-700">
+                <div className="text-2xl sm:text-3xl font-black text-emerald-700 dark:text-emerald-400">
                   {nextAttendProjection.projectedPercentage.toFixed(2)}%
                 </div>
-                <div className="text-xs text-slate-600 font-medium mt-0.5">
-                  Tally becomes <strong className="text-slate-900">{nextAttendProjection.projectedAttended} / {nextAttendProjection.projectedTotal}</strong>
+                <div className="text-xs text-slate-600 dark:text-slate-300 font-medium mt-0.5">
+                  Tally becomes <strong className="text-slate-900 dark:text-white">{nextAttendProjection.projectedAttended} / {nextAttendProjection.projectedTotal}</strong>
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-xs text-slate-500 font-medium block">Progress to 75%</span>
-                <span className="text-xs font-bold text-emerald-600">+9 classes to target</span>
+                <span className="text-xs text-slate-500 dark:text-slate-400 font-medium block">Projected Impact</span>
+                <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">+{nextAttendProjection.delta.toFixed(2)}% immediate lift</span>
               </div>
             </div>
 
@@ -397,33 +403,33 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
           </div>
 
           {/* OPTION 2: "× I'LL MISS" */}
-          <div className="p-5 rounded-2xl bg-white border-2 border-rose-200 shadow-sm hover:border-rose-400 hover:shadow-md transition-all group">
+          <div className="p-5 rounded-2xl bg-white dark:bg-slate-800 border-2 border-rose-200 dark:border-rose-800/80 shadow-sm hover:border-rose-400 dark:hover:border-rose-500 hover:shadow-md transition-all group">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <div className="w-7 h-7 rounded-lg bg-rose-500 text-white flex items-center justify-center font-bold text-sm">
                   ×
                 </div>
-                <span className="text-xs font-extrabold text-rose-900 uppercase tracking-wider">
+                <span className="text-xs font-extrabold text-rose-900 dark:text-rose-300 uppercase tracking-wider">
                   If You Miss This Class
                 </span>
               </div>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-100 text-rose-800">
-                -1.25% LOSS
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300">
+                {nextMissProjection.delta.toFixed(2)}% LOSS
               </span>
             </div>
 
             <div className="mt-4 flex items-baseline justify-between">
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-rose-700">
+                <div className="text-2xl sm:text-3xl font-black text-rose-700 dark:text-rose-400">
                   {nextMissProjection.projectedPercentage.toFixed(2)}%
                 </div>
-                <div className="text-xs text-slate-600 font-medium mt-0.5">
-                  Tally becomes <strong className="text-slate-900">{nextMissProjection.projectedAttended} / {nextMissProjection.projectedTotal}</strong>
+                <div className="text-xs text-slate-600 dark:text-slate-300 font-medium mt-0.5">
+                  Tally becomes <strong className="text-slate-900 dark:text-white">{nextMissProjection.projectedAttended} / {nextMissProjection.projectedTotal}</strong>
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-xs text-slate-500 font-medium block">Deficit Worsens</span>
-                <span className="text-xs font-bold text-rose-600">+12 classes to target</span>
+                <span className="text-xs text-slate-500 dark:text-slate-400 font-medium block">Projected Impact</span>
+                <span className="text-xs font-bold text-rose-600 dark:text-rose-400">{nextMissProjection.delta.toFixed(2)}% percentage drop</span>
               </div>
             </div>
 
@@ -440,31 +446,31 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
       {/* ============================================================== */}
       {/* SMART "WHAT-IF" SIMULATOR & TARGET PLANNER */}
       {/* ============================================================== */}
-      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm transition-all">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
           <div>
             <div className="flex items-center space-x-2">
-              <Sliders className="w-5 h-5 text-blue-700" />
-              <h2 className="text-xl font-bold text-blue-950 tracking-tight">
+              <Sliders className="w-5 h-5 text-blue-700 dark:text-blue-400" />
+              <h2 className="text-xl font-bold text-blue-950 dark:text-white tracking-tight">
                 Smart Attendance Target Planner & What-If Simulator
               </h2>
             </div>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
               Select your goal attendance percentage to compute mathematical required classes or safe bunks.
             </p>
           </div>
 
           {/* Quick Presets */}
-          <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl">
-            <span className="text-xs font-bold text-slate-500 px-2">Presets:</span>
+          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400 px-2">Presets:</span>
             {[75, 80, 85, 90].map(target => (
               <button
                 key={target}
                 onClick={() => setTargetPercentage(target)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   targetPercentage === target
-                    ? 'bg-blue-900 text-white shadow-sm'
-                    : 'text-slate-600 hover:bg-white hover:text-slate-900'
+                    ? 'bg-blue-900 dark:bg-blue-600 text-white shadow-sm'
+                    : 'text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
                 {target}%
@@ -478,10 +484,10 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
           <div className="lg:col-span-5 space-y-5">
             <div>
               <div className="flex justify-between items-center mb-2">
-                <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                <span className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                   Target Percentage
                 </span>
-                <span className="text-2xl font-black text-blue-900">
+                <span className="text-2xl font-black text-blue-900 dark:text-blue-400">
                   {targetPercentage}%
                 </span>
               </div>
@@ -492,9 +498,9 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
                 step="1"
                 value={targetPercentage}
                 onChange={(e) => setTargetPercentage(Number(e.target.value))}
-                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-900"
+                className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-900 dark:accent-blue-500"
               />
-              <div className="flex justify-between text-[11px] text-slate-400 font-semibold mt-1">
+              <div className="flex justify-between text-[11px] text-slate-400 dark:text-slate-500 font-semibold mt-1">
                 <span>70% (Min Condonation)</span>
                 <span>75% (Mandatory)</span>
                 <span>85% (Scholarship)</span>
@@ -505,33 +511,33 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
             {/* Target Formula Result Box */}
             <div className={`p-4 rounded-2xl border ${
               overallTargetStatus.isTargetMet 
-                ? 'bg-emerald-50/60 border-emerald-200' 
-                : 'bg-amber-50/60 border-amber-200'
+                ? 'bg-emerald-50/60 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/80' 
+                : 'bg-amber-50/60 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800/80'
             }`}>
               <div className="flex items-center space-x-2">
                 {overallTargetStatus.isTargetMet ? (
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 ) : (
-                  <AlertTriangle className="w-5 h-5 text-amber-600" />
+                  <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                 )}
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-200">
                   {overallTargetStatus.isTargetMet ? 'Goal Currently Met' : 'Action Required to Hit Goal'}
                 </span>
               </div>
 
-              <div className="mt-3 text-sm text-slate-700 leading-relaxed">
+              <div className="mt-3 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                 {overallTargetStatus.isTargetMet ? (
                   <>
-                    You are currently at <strong className="text-slate-900">{overallStats.overallPercentage.toFixed(2)}%</strong>, which is above your <strong className="text-emerald-700">{targetPercentage}%</strong> target! You can afford to miss <strong className="text-emerald-700 font-bold">{overallTargetStatus.classesCanMiss} more classes</strong> without falling below {targetPercentage}%.
+                    You are currently at <strong className="text-slate-900 dark:text-white">{overallStats.overallPercentage.toFixed(2)}%</strong>, which is above your <strong className="text-emerald-700 dark:text-emerald-400">{targetPercentage}%</strong> target! You can afford to miss <strong className="text-emerald-700 dark:text-emerald-400 font-bold">{overallTargetStatus.classesCanMiss} more classes</strong> without falling below {targetPercentage}%.
                   </>
                 ) : (
                   <>
-                    To reach <strong className="text-amber-800 font-bold">{targetPercentage}%</strong> from your current {overallStats.overallPercentage.toFixed(2)}%, you must attend <strong className="text-amber-800 font-bold">{overallTargetStatus.classesNeeded} consecutive classes</strong> with zero absences.
+                    To reach <strong className="text-amber-800 dark:text-amber-400 font-bold">{targetPercentage}%</strong> from your current {overallStats.overallPercentage.toFixed(2)}%, you must attend <strong className="text-amber-800 dark:text-amber-400 font-bold">{overallTargetStatus.classesNeeded} consecutive classes</strong> with zero absences.
                   </>
                 )}
               </div>
 
-              <div className="mt-3 text-[11px] text-slate-500 font-mono bg-white p-2 rounded-lg border border-slate-200">
+              <div className="mt-3 text-[11px] text-slate-500 dark:text-slate-400 font-mono bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
                 Formula: {overallTargetStatus.isTargetMet 
                   ? `safe_bunks = floor((100 × ${overallStats.totalAttended} - ${targetPercentage} × ${overallStats.totalHeld}) / ${targetPercentage}) = ${overallTargetStatus.classesCanMiss}`
                   : `needed = ceil((${targetPercentage} × ${overallStats.totalHeld} - 100 × ${overallStats.totalAttended}) / (100 - ${targetPercentage})) = ${overallTargetStatus.classesNeeded}`}
@@ -540,12 +546,12 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
           </div>
 
           {/* Projection Area Chart over Next 30 Classes */}
-          <div className="lg:col-span-7 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <div className="lg:col-span-7 bg-slate-50 dark:bg-slate-850 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                 Attendance Trajectory (Next 30 Classes)
               </span>
-              <span className="text-[11px] text-slate-500">Live Mathematical Simulation</span>
+              <span className="text-[11px] text-slate-500 dark:text-slate-400">Live Mathematical Simulation</span>
             </div>
 
             <div className="h-60 w-full">
@@ -565,11 +571,11 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
                       <stop offset="95%" stopColor="#EF4444" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
-                  <XAxis dataKey="classes" tick={{ fontSize: 11 }} />
-                  <YAxis domain={[65, 88]} tick={{ fontSize: 11 }} unit="%" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#94A3B8" opacity={0.2} />
+                  <XAxis dataKey="classes" tick={{ fontSize: 11, fill: '#94A3B8' }} />
+                  <YAxis domain={[65, 88]} tick={{ fontSize: 11, fill: '#94A3B8' }} unit="%" />
                   <Tooltip 
-                    contentStyle={{ backgroundColor: '#0F2A4A', borderColor: '#1E3A8A', borderRadius: '12px', color: '#fff', fontSize: '12px' }} 
+                    contentStyle={{ backgroundColor: '#0F172A', borderColor: '#334155', borderRadius: '12px', color: '#fff', fontSize: '12px' }} 
                   />
                   <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
                   <Area type="monotone" dataKey="100% Rate" stroke="#10B981" strokeWidth={2.5} fillOpacity={1} fill="url(#color100)" />
@@ -585,24 +591,26 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
       {/* ============================================================== */}
       {/* SUBJECT ATTENDANCE TABLE & DEEP DIVE */}
       {/* ============================================================== */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
-        <div className="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden transition-all">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h2 className="text-xl font-bold text-blue-950 tracking-tight">
+            <h2 className="text-xl font-bold text-blue-950 dark:text-white tracking-tight">
               Subject-Wise Academic Attendance (Semester 5)
             </h2>
-            <p className="text-xs text-slate-500 mt-0.5">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
               Click any subject to open deep-dive analysis, session logs, and specific what-if calculations.
             </p>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold text-slate-500">Filter:</span>
-            <div className="flex bg-slate-100 p-1 rounded-xl text-xs font-medium">
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Filter:</span>
+            <div className="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-medium">
               <button
                 onClick={() => setSubjectFilter('all')}
                 className={`px-3 py-1 rounded-lg transition-all ${
-                  subjectFilter === 'all' ? 'bg-white text-blue-900 font-bold shadow-sm' : 'text-slate-600'
+                  subjectFilter === 'all' 
+                    ? 'bg-white dark:bg-slate-700 text-blue-900 dark:text-blue-300 font-bold shadow-sm' 
+                    : 'text-slate-600 dark:text-slate-400'
                 }`}
               >
                 All ({subjectAttendance.length})
@@ -610,7 +618,9 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
               <button
                 onClick={() => setSubjectFilter('risk')}
                 className={`px-3 py-1 rounded-lg transition-all ${
-                  subjectFilter === 'risk' ? 'bg-white text-rose-700 font-bold shadow-sm' : 'text-slate-600'
+                  subjectFilter === 'risk' 
+                    ? 'bg-white dark:bg-slate-700 text-rose-700 dark:text-rose-400 font-bold shadow-sm' 
+                    : 'text-slate-600 dark:text-slate-400'
                 }`}
               >
                 At Risk ({subjectAttendance.filter(s => s.percentage < 75).length})
@@ -618,7 +628,9 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
               <button
                 onClick={() => setSubjectFilter('safe')}
                 className={`px-3 py-1 rounded-lg transition-all ${
-                  subjectFilter === 'safe' ? 'bg-white text-emerald-700 font-bold shadow-sm' : 'text-slate-600'
+                  subjectFilter === 'safe' 
+                    ? 'bg-white dark:bg-slate-700 text-emerald-700 dark:text-emerald-400 font-bold shadow-sm' 
+                    : 'text-slate-600 dark:text-slate-400'
                 }`}
               >
                 Safe ({subjectAttendance.filter(s => s.percentage >= 75).length})
@@ -631,7 +643,7 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-slate-50/80 border-b border-slate-200 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+              <tr className="bg-slate-50/80 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800 text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                 <th className="py-3.5 px-6">Subject / Course</th>
                 <th className="py-3.5 px-4">Faculty Incharge</th>
                 <th className="py-3.5 px-4 text-center">Attended / Held</th>
@@ -640,7 +652,7 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
                 <th className="py-3.5 px-6 text-right">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-xs text-slate-700">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-xs text-slate-700 dark:text-slate-200">
               {filteredSubjects.map(subject => {
                 const subStatus = calculateAttendanceStatus(
                   subject.attended ?? subject.classesAttended ?? 0, 
@@ -653,40 +665,42 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
                   <tr 
                     key={subject.id} 
                     onClick={() => setSelectedSubject(subject)}
-                    className="hover:bg-blue-50/40 transition-colors cursor-pointer group"
+                    className="hover:bg-blue-50/40 dark:hover:bg-slate-800/60 transition-colors cursor-pointer group"
                   >
                     <td className="py-4 px-6">
-                      <div className="font-bold text-slate-900 group-hover:text-blue-900 transition-colors">
+                      <div className="font-bold text-slate-900 dark:text-white group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors">
                         {subject.subjectName}
                       </div>
-                      <div className="text-[11px] text-slate-400 font-mono mt-0.5 flex items-center gap-2">
+                      <div className="text-[11px] text-slate-400 dark:text-slate-500 font-mono mt-0.5 flex items-center gap-2">
                         <span>{subject.courseCode}</span>
                         <span>•</span>
                         <span>{subject.credits} Credits</span>
                       </div>
                     </td>
 
-                    <td className="py-4 px-4 font-medium text-slate-600">
+                    <td className="py-4 px-4 font-medium text-slate-600 dark:text-slate-300">
                       {subject.facultyName}
-                      <div className="text-[10px] text-slate-400 font-sans">Room: {subject.room}</div>
+                      <div className="text-[10px] text-slate-400 dark:text-slate-500 font-sans">Room: {subject.room}</div>
                     </td>
 
-                    <td className="py-4 px-4 text-center font-semibold text-slate-900">
+                    <td className="py-4 px-4 text-center font-semibold text-slate-900 dark:text-white">
                       {subject.attended} / {subject.totalHeld}
                     </td>
 
                     <td className="py-4 px-6">
                       <div className="flex items-center justify-between mb-1.5">
-                        <span className={`font-black ${isRisk ? 'text-rose-600' : 'text-emerald-600'}`}>
+                        <span className={`font-black ${isRisk ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
                           {subject.percentage.toFixed(2)}%
                         </span>
                         <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                          isRisk ? 'bg-rose-100 text-rose-800' : 'bg-emerald-100 text-emerald-800'
+                          isRisk 
+                            ? 'bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300' 
+                            : 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300'
                         }`}>
                           {isRisk ? 'CRITICAL' : 'SAFE'}
                         </span>
                       </div>
-                      <div className="w-36 bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                      <div className="w-36 bg-slate-100 dark:bg-slate-800 rounded-full h-1.5 overflow-hidden">
                         <div 
                           className={`h-full rounded-full ${isRisk ? 'bg-rose-500' : 'bg-emerald-500'}`}
                           style={{ width: `${Math.min(100, subject.percentage)}%` }}
@@ -696,11 +710,11 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
 
                     <td className="py-4 px-4 font-medium">
                       {isRisk ? (
-                        <span className="text-rose-600 font-semibold flex items-center gap-1">
+                        <span className="text-rose-600 dark:text-rose-400 font-semibold flex items-center gap-1">
                           <AlertTriangle className="w-3.5 h-3.5" /> Need {subStatus.classesNeeded} classes
                         </span>
                       ) : (
-                        <span className="text-emerald-700 font-semibold flex items-center gap-1">
+                        <span className="text-emerald-700 dark:text-emerald-400 font-semibold flex items-center gap-1">
                           <CheckCircle2 className="w-3.5 h-3.5" /> {subStatus.classesCanMiss} safe bunks
                         </span>
                       )}
@@ -712,7 +726,7 @@ export const DashboardView: React.FC<{ onNavigate?: (tab: string) => void }> = (
                           e.stopPropagation();
                           setSelectedSubject(subject);
                         }}
-                        className="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-800 hover:bg-blue-100 font-semibold text-xs transition-colors inline-flex items-center gap-1"
+                        className="px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-slate-800 text-blue-800 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-slate-700 font-semibold text-xs transition-colors inline-flex items-center gap-1"
                       >
                         Deep Dive <ChevronRight className="w-3.5 h-3.5" />
                       </button>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 import { 
   GraduationCap, 
   ShieldCheck, 
@@ -8,17 +9,20 @@ import {
   CheckCircle2, 
   TrendingUp, 
   Calendar, 
-  Award,
-  BookOpen,
-  Lock,
-  Mail,
-  Eye,
-  EyeOff,
-  UserCheck
+  Award, 
+  BookOpen, 
+  Lock, 
+  Mail, 
+  Eye, 
+  EyeOff, 
+  UserCheck,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 export const LandingLoginView: React.FC = () => {
   const { login } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const [email, setEmail] = useState('rishi.24b11ai051@aditya.ac.in');
   const [password, setPassword] = useState('password123');
   const [showPassword, setShowPassword] = useState(false);
@@ -78,14 +82,25 @@ export const LandingLoginView: React.FC = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-6 text-sm text-blue-200/80">
-            <span className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
+          <div className="flex items-center space-x-4 sm:space-x-6 text-sm text-blue-200/80">
+            <span className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
               <ShieldCheck className="w-4 h-4 text-emerald-400" /> NAAC A++ Accredited
             </span>
-            <span className="text-blue-500/40">•</span>
-            <span className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
+            <span className="hidden md:inline text-blue-500/40">•</span>
+            <span className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
               <Sparkles className="w-4 h-4 text-orange-400" /> AI Attendance Engine
             </span>
+
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle Theme"
+              className="p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-amber-400 hover:text-amber-300 border border-slate-700 transition-all cursor-pointer shadow-sm"
+              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4 text-blue-300" />}
+            </button>
+
             <a 
               href="#login-form" 
               className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs shadow-md shadow-blue-700/30 transition-all hover:scale-105"

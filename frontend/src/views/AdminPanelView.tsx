@@ -220,25 +220,25 @@ export const AdminPanelView: React.FC = () => {
       </div>
 
       {activeTab === 'students' ? (
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
           {/* Action and Filter Bar */}
-          <div className="p-6 border-b border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-6 border-b border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <div className="relative w-full sm:w-64">
-                <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+                <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
                 <input
                   type="text"
                   placeholder="Search roll or name..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-9 pr-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-700 focus:outline-none"
+                className="px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 focus:outline-none"
               >
                 <option value="ALL">All Statuses</option>
                 <option value="ELIGIBLE">Eligible (≥75%)</option>
@@ -250,7 +250,7 @@ export const AdminPanelView: React.FC = () => {
             <div className="flex items-center space-x-3 w-full sm:w-auto justify-end">
               <button
                 onClick={handleOpenAdd}
-                className="px-4 py-2.5 rounded-xl bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs shadow-md shadow-blue-900/20 flex items-center space-x-1.5 transition-all cursor-pointer"
+                className="px-4 py-2.5 rounded-xl bg-blue-900 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold text-xs shadow-md shadow-blue-900/20 flex items-center space-x-1.5 transition-all cursor-pointer"
               >
                 <UserPlus className="w-4 h-4" />
                 <span>Add Student</span>
@@ -262,7 +262,7 @@ export const AdminPanelView: React.FC = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
-                <tr className="bg-slate-50 text-[11px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-200">
+                <tr className="bg-slate-50 dark:bg-slate-800/80 text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider border-b border-slate-200 dark:border-slate-800">
                   <th className="py-3.5 px-6">Student Info</th>
                   <th className="py-3.5 px-4">Program & Sem</th>
                   <th className="py-3.5 px-4 text-center">Attendance %</th>
@@ -271,31 +271,31 @@ export const AdminPanelView: React.FC = () => {
                   <th className="py-3.5 px-6 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 text-slate-700">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
                 {filteredStudents.map((s) => (
-                  <tr key={s.id} className="hover:bg-slate-50 transition-colors">
+                  <tr key={s.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors">
                     <td className="py-4 px-6">
-                      <div className="font-bold text-slate-900">{s.name}</div>
-                      <div className="text-[11px] font-mono text-blue-900 font-semibold">{s.rollNumber}</div>
-                      <div className="text-[10px] text-slate-400">{s.email}</div>
+                      <div className="font-bold text-slate-900 dark:text-white">{s.name}</div>
+                      <div className="text-[11px] font-mono text-blue-900 dark:text-blue-400 font-semibold">{s.rollNumber}</div>
+                      <div className="text-[10px] text-slate-400 dark:text-slate-500">{s.email}</div>
                     </td>
                     <td className="py-4 px-4">
-                      <div className="font-medium text-slate-800">{s.program}</div>
-                      <div className="text-[11px] text-slate-500">{s.semester} • Sec {s.section}</div>
+                      <div className="font-medium text-slate-800 dark:text-slate-200">{s.program}</div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400">{s.semester} • Sec {s.section}</div>
                     </td>
-                    <td className="py-4 px-4 text-center font-bold text-slate-900">
-                      <span className={s.overallAttendance >= 75 ? 'text-emerald-700' : 'text-rose-600'}>
+                    <td className="py-4 px-4 text-center font-bold text-slate-900 dark:text-white">
+                      <span className={s.overallAttendance >= 75 ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}>
                         {s.overallAttendance.toFixed(2)}%
                       </span>
                     </td>
-                    <td className="py-4 px-4 text-center font-bold text-blue-950">
+                    <td className="py-4 px-4 text-center font-bold text-blue-950 dark:text-blue-300">
                       {s.cgpa.toFixed(2)}
                     </td>
                     <td className="py-4 px-4 text-center">
                       <span className={`inline-block font-extrabold px-2.5 py-0.5 rounded-full text-[10px] ${
-                        s.status === 'ELIGIBLE' ? 'bg-emerald-100 text-emerald-800' :
-                        s.status === 'CONDONATION' ? 'bg-amber-100 text-amber-800' :
-                        'bg-rose-100 text-rose-800'
+                        s.status === 'ELIGIBLE' ? 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300' :
+                        s.status === 'CONDONATION' ? 'bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300' :
+                        'bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300'
                       }`}>
                         {s.status}
                       </span>
@@ -303,14 +303,14 @@ export const AdminPanelView: React.FC = () => {
                     <td className="py-4 px-6 text-right space-x-2">
                       <button
                         onClick={() => handleOpenEdit(s)}
-                        className="p-1.5 rounded-lg bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-900 transition-colors cursor-pointer"
+                        className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors cursor-pointer"
                         title="Edit Student"
                       >
                         <Edit className="w-3.5 h-3.5" />
                       </button>
                       <button
                         onClick={() => handleDelete(s.id)}
-                        className="p-1.5 rounded-lg bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-600 transition-colors cursor-pointer"
+                        className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-rose-50 dark:hover:bg-rose-950/50 text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors cursor-pointer"
                         title="Delete Student"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -366,8 +366,8 @@ export const AdminPanelView: React.FC = () => {
       {/* Add / Edit Student Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-md overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-            <div className="bg-blue-950 text-white p-6 flex items-center justify-between">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 w-full max-w-md overflow-hidden animate-in fade-in zoom-in-95 duration-200 transition-colors">
+            <div className="bg-blue-950 dark:bg-slate-950 text-white p-6 flex items-center justify-between border-b border-blue-900/40 dark:border-slate-800">
               <h3 className="text-base font-bold">
                 {editingStudent ? 'Edit Student Record' : 'Register New Student'}
               </h3>
@@ -381,57 +381,57 @@ export const AdminPanelView: React.FC = () => {
 
             <form onSubmit={handleSaveStudent} className="p-6 space-y-4 text-xs">
               <div>
-                <label className="font-bold text-slate-700 block mb-1">Full Student Name</label>
+                <label className="font-bold text-slate-700 dark:text-slate-300 block mb-1">Full Student Name</label>
                 <input
                   type="text"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. B. Rishi Vardhan"
-                  className="w-full p-2.5 rounded-xl border border-slate-300 text-xs text-slate-800"
+                  className="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Roll Number</label>
+                  <label className="font-bold text-slate-700 dark:text-slate-300 block mb-1">Roll Number</label>
                   <input
                     type="text"
                     required
                     value={formData.rollNumber}
                     onChange={(e) => setFormData({ ...formData, rollNumber: e.target.value })}
                     placeholder="24B11AI051"
-                    className="w-full p-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 font-mono"
+                    className="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-800 dark:text-slate-200 font-mono focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Section</label>
+                  <label className="font-bold text-slate-700 dark:text-slate-300 block mb-1">Section</label>
                   <input
                     type="text"
                     required
                     value={formData.section}
                     onChange={(e) => setFormData({ ...formData, section: e.target.value })}
                     placeholder="A"
-                    className="w-full p-2.5 rounded-xl border border-slate-300 text-xs text-slate-800"
+                    className="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="font-bold text-slate-700 block mb-1">College Email</label>
+                <label className="font-bold text-slate-700 dark:text-slate-300 block mb-1">College Email</label>
                 <input
                   type="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="rishi.24b11ai051@aditya.ac.in"
-                  className="w-full p-2.5 rounded-xl border border-slate-300 text-xs text-slate-800"
+                  className="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Current Attendance %</label>
+                  <label className="font-bold text-slate-700 dark:text-slate-300 block mb-1">Current Attendance %</label>
                   <input
                     type="number"
                     step="0.1"
@@ -440,11 +440,11 @@ export const AdminPanelView: React.FC = () => {
                     required
                     value={formData.overallAttendance}
                     onChange={(e) => setFormData({ ...formData, overallAttendance: Number(e.target.value) })}
-                    className="w-full p-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 font-bold"
+                    className="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-800 dark:text-slate-200 font-bold focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">CGPA</label>
+                  <label className="font-bold text-slate-700 dark:text-slate-300 block mb-1">CGPA</label>
                   <input
                     type="number"
                     step="0.01"
@@ -453,22 +453,22 @@ export const AdminPanelView: React.FC = () => {
                     required
                     value={formData.cgpa}
                     onChange={(e) => setFormData({ ...formData, cgpa: Number(e.target.value) })}
-                    className="w-full p-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 font-bold"
+                    className="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-800 dark:text-slate-200 font-bold focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
 
-              <div className="flex items-center justify-end space-x-2 pt-4 border-t border-slate-200">
+              <div className="flex items-center justify-end space-x-2 pt-4 border-t border-slate-200 dark:border-slate-800">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 rounded-xl text-slate-600 hover:text-slate-900 font-semibold cursor-pointer"
+                  className="px-4 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-semibold cursor-pointer transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-xl bg-blue-900 hover:bg-blue-800 text-white font-bold shadow-md cursor-pointer"
+                  className="px-5 py-2.5 rounded-xl bg-blue-900 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold shadow-md cursor-pointer transition-colors"
                 >
                   Save Student
                 </button>

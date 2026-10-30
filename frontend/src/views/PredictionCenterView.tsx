@@ -78,94 +78,94 @@ export const PredictionCenterView: React.FC = () => {
 
       {/* Main Prediction Metrics Summary */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm relative overflow-hidden">
-          <div className="flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden transition-colors">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
             <span>End-Semester Forecast</span>
-            <BrainCircuit className="w-4 h-4 text-blue-700" />
+            <BrainCircuit className="w-4 h-4 text-blue-700 dark:text-blue-400" />
           </div>
           <div className="mt-3 flex items-baseline justify-between">
-            <span className="text-3xl font-black text-blue-950">
+            <span className="text-3xl font-black text-blue-950 dark:text-white">
               {(prediction.forecastedPercentage ?? prediction.projectedSemesterPercentage ?? 78.4).toFixed(2)}%
             </span>
-            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300">
               SAFE PASS
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-2">
-            95% Confidence Interval: <strong className="text-slate-900">[{(prediction.confidenceInterval?.lower ?? prediction.confidenceLower ?? 75.8).toFixed(1)}% — {(prediction.confidenceInterval?.upper ?? prediction.confidenceUpper ?? 81.2).toFixed(1)}%]</strong>
+          <p className="text-xs text-slate-600 dark:text-slate-300 mt-2">
+            95% Confidence Interval: <strong className="text-slate-900 dark:text-white">[{(prediction.confidenceInterval?.lower ?? prediction.confidenceLower ?? 75.8).toFixed(1)}% — {(prediction.confidenceInterval?.upper ?? prediction.confidenceUpper ?? 81.2).toFixed(1)}%]</strong>
           </p>
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
             <span>Current: 76.96%</span>
-            <span className="text-emerald-600 font-bold flex items-center">
+            <span className="text-emerald-600 dark:text-emerald-400 font-bold flex items-center">
               <TrendingUp className="w-3.5 h-3.5 mr-0.5" /> +1.44% Trend
             </span>
           </div>
         </div>
 
-        <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm relative overflow-hidden">
-          <div className="flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden transition-colors">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
             <span>Projected SGPA</span>
-            <Award className="w-4 h-4 text-orange-500" />
+            <Award className="w-4 h-4 text-orange-500 dark:text-orange-400" />
           </div>
           <div className="mt-3 flex items-baseline justify-between">
-            <span className="text-3xl font-black text-slate-900">
+            <span className="text-3xl font-black text-slate-900 dark:text-white">
               8.64
             </span>
-            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800">
+            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300">
               GRADE A+
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-2">
+          <p className="text-xs text-slate-600 dark:text-slate-300 mt-2">
             Based on current 82% internal marks average & attendance consistency multiplier.
           </p>
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
             <span>Target: 8.50+</span>
-            <span className="text-purple-700 font-bold">Top 5% Rank</span>
+            <span className="text-purple-700 dark:text-purple-400 font-bold">Top 5% Rank</span>
           </div>
         </div>
 
-        <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm relative overflow-hidden">
-          <div className="flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden transition-colors">
+          <div className="flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
             <span>Current Risk Status</span>
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
           </div>
           <div className="mt-3 flex items-baseline justify-between">
-            <span className="text-3xl font-black text-emerald-600">
+            <span className="text-3xl font-black text-emerald-600 dark:text-emerald-400">
               LOW RISK
             </span>
-            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+            <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300">
               NO DEBAR
             </span>
           </div>
-          <p className="text-xs text-slate-600 mt-2">
-            Only 1 of 8 courses (<strong className="text-rose-600 font-bold">OOAD & UML</strong>) requires active attendance mitigation.
+          <p className="text-xs text-slate-600 dark:text-slate-300 mt-2">
+            Only 1 of 8 courses (<strong className="text-rose-600 dark:text-rose-400 font-bold">OOAD & UML</strong>) requires active attendance mitigation.
           </p>
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
             <span>Condonation Buffer:</span>
-            <span className="text-orange-600 font-bold">8 classes</span>
+            <span className="text-orange-600 dark:text-orange-400 font-bold">8 classes</span>
           </div>
         </div>
       </div>
 
       {/* Trajectory Timeline Chart */}
-      <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+      <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm transition-colors">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
           <div>
-            <h2 className="text-lg font-bold text-blue-950">
+            <h2 className="text-lg font-bold text-blue-950 dark:text-white">
               Semester Attendance Trajectory & Forecast Curve
             </h2>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               Historical actuals (Weeks 1–12) merged with linear regression trajectory (Weeks 14–18).
             </p>
           </div>
           <div className="flex items-center space-x-3 text-xs font-semibold">
-            <span className="flex items-center gap-1 text-blue-900">
-              <span className="w-3 h-0.5 bg-blue-900"></span> Actual Trend
+            <span className="flex items-center gap-1 text-blue-900 dark:text-blue-400">
+              <span className="w-3 h-0.5 bg-blue-900 dark:bg-blue-400"></span> Actual Trend
             </span>
-            <span className="flex items-center gap-1 text-emerald-600">
+            <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
               <span className="w-3 h-0.5 bg-emerald-500 border-dashed"></span> AI Projection
             </span>
-            <span className="flex items-center gap-1 text-rose-500">
+            <span className="flex items-center gap-1 text-rose-500 dark:text-rose-400">
               <span className="w-3 h-0.5 bg-rose-500"></span> 75% Threshold
             </span>
           </div>
@@ -174,9 +174,9 @@ export const PredictionCenterView: React.FC = () => {
         <div className="h-64 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={projectionTimeline} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" />
-              <XAxis dataKey="label" tick={{ fontSize: 11 }} />
-              <YAxis domain={[72, 82]} tick={{ fontSize: 11 }} unit="%" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#94A3B8" opacity={0.25} />
+              <XAxis dataKey="label" tick={{ fontSize: 11, fill: '#64748B' }} />
+              <YAxis domain={[72, 82]} tick={{ fontSize: 11, fill: '#64748B' }} unit="%" />
               <Tooltip 
                 contentStyle={{ backgroundColor: '#0F2A4A', borderColor: '#1E3A8A', borderRadius: '12px', color: '#fff', fontSize: '12px' }} 
               />
@@ -188,12 +188,12 @@ export const PredictionCenterView: React.FC = () => {
       </div>
 
       {/* 3 Interactive Future Scenarios */}
-      <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+      <div className="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6 transition-colors">
         <div>
-          <h2 className="text-xl font-bold text-blue-950">
+          <h2 className="text-xl font-bold text-blue-950 dark:text-white">
             Interactive Future Attendance Scenarios
           </h2>
-          <p className="text-xs text-slate-500 mt-0.5">
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
             Test what will happen across the remaining 86 classes of the semester under various attendance commitments.
           </p>
         </div>
@@ -204,27 +204,27 @@ export const PredictionCenterView: React.FC = () => {
             onClick={() => setSelectedScenario('90')}
             className={`p-5 rounded-2xl border-2 transition-all cursor-pointer ${
               selectedScenario === '90' 
-                ? 'bg-emerald-50/50 border-emerald-500 shadow-md ring-2 ring-emerald-500/20' 
-                : 'bg-white border-slate-200 hover:border-emerald-200'
+                ? 'bg-emerald-50/50 dark:bg-emerald-950/30 border-emerald-500 shadow-md ring-2 ring-emerald-500/20' 
+                : 'bg-white dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:border-emerald-200 dark:hover:border-emerald-600'
             }`}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
                 High Discipline (90%)
               </span>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300">
                 RECOMMENDED
               </span>
             </div>
             <div className="mt-3">
-              <div className="text-3xl font-black text-emerald-700">79.12%</div>
-              <p className="text-xs text-slate-600 mt-1">
+              <div className="text-3xl font-black text-emerald-700 dark:text-emerald-400">79.12%</div>
+              <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">
                 Attend 77 of 86 remaining classes.
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-emerald-100 text-xs text-emerald-900 space-y-1">
+            <div className="mt-4 pt-3 border-t border-emerald-100 dark:border-emerald-900/60 text-xs text-emerald-900 dark:text-emerald-200 space-y-1">
               <div className="flex items-center gap-1 font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Condonation Free
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Condonation Free
               </div>
               <div>Projected SGPA: <strong>8.82</strong></div>
             </div>
@@ -235,27 +235,27 @@ export const PredictionCenterView: React.FC = () => {
             onClick={() => setSelectedScenario('75')}
             className={`p-5 rounded-2xl border-2 transition-all cursor-pointer ${
               selectedScenario === '75' 
-                ? 'bg-blue-50/50 border-blue-500 shadow-md ring-2 ring-blue-500/20' 
-                : 'bg-white border-slate-200 hover:border-blue-200'
+                ? 'bg-blue-50/50 dark:bg-blue-950/30 border-blue-500 shadow-md ring-2 ring-blue-500/20' 
+                : 'bg-white dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:border-blue-200 dark:hover:border-blue-600'
             }`}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-900">
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-900 dark:text-blue-300">
                 Maintenance (75%)
               </span>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300">
                 BASELINE
               </span>
             </div>
             <div className="mt-3">
-              <div className="text-3xl font-black text-blue-900">76.63%</div>
-              <p className="text-xs text-slate-600 mt-1">
+              <div className="text-3xl font-black text-blue-900 dark:text-blue-400">76.63%</div>
+              <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">
                 Attend 65 of 86 remaining classes.
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-blue-100 text-xs text-blue-950 space-y-1">
+            <div className="mt-4 pt-3 border-t border-blue-100 dark:border-blue-900/60 text-xs text-blue-950 dark:text-blue-200 space-y-1">
               <div className="flex items-center gap-1 font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-blue-700" /> Standard Exam Eligible
+                <CheckCircle2 className="w-3.5 h-3.5 text-blue-700 dark:text-blue-400" /> Standard Exam Eligible
               </div>
               <div>Projected SGPA: <strong>8.50</strong></div>
             </div>
@@ -266,27 +266,27 @@ export const PredictionCenterView: React.FC = () => {
             onClick={() => setSelectedScenario('50')}
             className={`p-5 rounded-2xl border-2 transition-all cursor-pointer ${
               selectedScenario === '50' 
-                ? 'bg-rose-50/50 border-rose-500 shadow-md ring-2 ring-rose-500/20' 
-                : 'bg-white border-slate-200 hover:border-rose-200'
+                ? 'bg-rose-50/50 dark:bg-rose-950/30 border-rose-500 shadow-md ring-2 ring-rose-500/20' 
+                : 'bg-white dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:border-rose-200 dark:hover:border-rose-600'
             }`}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-rose-800">
+              <span className="text-xs font-bold uppercase tracking-wider text-rose-800 dark:text-rose-300">
                 Complacent (50%)
               </span>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-100 text-rose-800">
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300">
                 HIGH DANGER
               </span>
             </div>
             <div className="mt-3">
-              <div className="text-3xl font-black text-rose-600">72.50%</div>
-              <p className="text-xs text-slate-600 mt-1">
+              <div className="text-3xl font-black text-rose-600 dark:text-rose-400">72.50%</div>
+              <p className="text-xs text-slate-600 dark:text-slate-300 mt-1">
                 Attend only 43 of 86 remaining classes.
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-rose-100 text-xs text-rose-900 space-y-1">
+            <div className="mt-4 pt-3 border-t border-rose-100 dark:border-rose-900/60 text-xs text-rose-900 dark:text-rose-200 space-y-1">
               <div className="flex items-center gap-1 font-semibold">
-                <AlertTriangle className="w-3.5 h-3.5 text-rose-600" /> DEBARRED / CONDONATION
+                <AlertTriangle className="w-3.5 h-3.5 text-rose-600 dark:text-rose-400" /> DEBARRED / CONDONATION
               </div>
               <div>Fine Required: <strong>₹2,500 INR</strong></div>
             </div>
@@ -296,9 +296,9 @@ export const PredictionCenterView: React.FC = () => {
 
       {/* Model Feature Explanations */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-          <h3 className="text-base font-bold text-blue-950 flex items-center gap-2">
-            <Layers className="w-4 h-4 text-blue-700" />
+        <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 transition-colors">
+          <h3 className="text-base font-bold text-blue-950 dark:text-white flex items-center gap-2">
+            <Layers className="w-4 h-4 text-blue-700 dark:text-blue-400" />
             AI Model Feature Weights
           </h3>
           <div className="space-y-3">
@@ -309,12 +309,12 @@ export const PredictionCenterView: React.FC = () => {
               { label: 'Day of Week Fluctuations (Fri/Mon)', weight: '15%', desc: 'Mondays and Fridays correlate with extended weekend skips' },
               { label: 'Prior Semesters Baseline (1st - 4th Sem)', weight: '10%', desc: 'Historical 85%+ average student baseline factor' }
             ].map((f, i) => (
-              <div key={i} className="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+              <div key={i} className="p-3 rounded-xl bg-slate-50 dark:bg-slate-850/60 border border-slate-200 dark:border-slate-700/80 flex items-center justify-between">
                 <div>
-                  <div className="text-xs font-bold text-slate-800">{f.label}</div>
-                  <div className="text-[10px] text-slate-500 mt-0.5">{f.desc}</div>
+                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200">{f.label}</div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">{f.desc}</div>
                 </div>
-                <span className="text-xs font-extrabold text-blue-900 bg-blue-100 px-2 py-0.5 rounded-md">
+                <span className="text-xs font-extrabold text-blue-900 dark:text-blue-300 bg-blue-100 dark:bg-blue-950/80 px-2 py-0.5 rounded-md">
                   {f.weight}
                 </span>
               </div>
@@ -322,33 +322,33 @@ export const PredictionCenterView: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-          <h3 className="text-base font-bold text-blue-950 flex items-center gap-2">
-            <Zap className="w-4 h-4 text-orange-500" />
+        <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 transition-colors">
+          <h3 className="text-base font-bold text-blue-950 dark:text-white flex items-center gap-2">
+            <Zap className="w-4 h-4 text-orange-500 dark:text-orange-400" />
             Actionable AI Recommendations
           </h3>
           <div className="space-y-3">
-            <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 space-y-1">
-              <div className="font-bold flex items-center gap-1.5 text-amber-950">
-                <AlertTriangle className="w-4 h-4 text-amber-600" /> Urgent: Prioritize OOAD & UML
+            <div className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/80 text-xs text-amber-900 dark:text-amber-200 space-y-1">
+              <div className="font-bold flex items-center gap-1.5 text-amber-950 dark:text-amber-300">
+                <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400" /> Urgent: Prioritize OOAD & UML
               </div>
               <p>
                 OOAD (241CS017) is your only course below 75% (currently 71.43%). If you attend the upcoming Monday 10:00 AM class and the next 8 sessions, you will recover full 75%+ eligibility.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950 space-y-1">
-              <div className="font-bold flex items-center gap-1.5 text-blue-900">
-                <CheckCircle2 className="w-4 h-4 text-blue-700" /> Excel in API & Micro Services
+            <div className="p-3.5 rounded-xl bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/80 text-xs text-blue-950 dark:text-blue-200 space-y-1">
+              <div className="font-bold flex items-center gap-1.5 text-blue-900 dark:text-blue-300">
+                <CheckCircle2 className="w-4 h-4 text-blue-700 dark:text-blue-400" /> Excel in API & Micro Services
               </div>
               <p>
                 API & Micro Services (241CS019) under Kumari is in strong standing. Sustain perfect attendance to secure full internal marks and capstone honors.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-950 space-y-1">
-              <div className="font-bold flex items-center gap-1.5 text-emerald-700">
-                <Award className="w-4 h-4 text-emerald-600" /> Target SGPA 8.8+ Potential
+            <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/80 text-xs text-emerald-950 dark:text-emerald-200 space-y-1">
+              <div className="font-bold flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300">
+                <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Target SGPA 8.8+ Potential
               </div>
               <p>
                 By maintaining a 90% attendance discipline over the final 86 classes, your projected internal marks correlate to an SGPA of 8.82, placing you on the University Merit Roll.

@@ -68,17 +68,17 @@ export const AppContent: React.FC = () => {
     // Strict role-based route guards
     if (activeTab === 'admin' && role !== 'ADMIN') {
       return (
-        <div className="min-h-[50vh] flex flex-col items-center justify-center p-8 bg-white rounded-3xl border border-rose-200 text-center space-y-4">
-          <div className="w-16 h-16 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-2xl">
+        <div className="min-h-[50vh] flex flex-col items-center justify-center p-8 bg-white dark:bg-slate-900 rounded-3xl border border-rose-200 dark:border-rose-900/50 text-center space-y-4">
+          <div className="w-16 h-16 rounded-2xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-2xl">
             403
           </div>
-          <h2 className="text-xl font-bold text-slate-900">Access Denied: Administrative Console</h2>
-          <p className="text-xs text-slate-500 max-w-md">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Access Denied: Administrative Console</h2>
+          <p className="text-xs text-slate-500 dark:text-slate-400 max-w-md">
             You do not possess SUPER_ADMIN credentials required to inspect Spring AOP telemetry or execute student database modifications.
           </p>
           <button
             onClick={() => setActiveTab(role === 'FACULTY' ? 'faculty' : 'dashboard')}
-            className="px-4 py-2 bg-blue-900 text-white rounded-xl text-xs font-bold hover:bg-blue-800 transition"
+            className="px-4 py-2 bg-blue-900 dark:bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-800 transition"
           >
             Return to Authorized Portal
           </button>
@@ -88,17 +88,17 @@ export const AppContent: React.FC = () => {
 
     if (activeTab === 'faculty' && role !== 'FACULTY') {
       return (
-        <div className="min-h-[50vh] flex flex-col items-center justify-center p-8 bg-white rounded-3xl border border-rose-200 text-center space-y-4">
-          <div className="w-16 h-16 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-2xl">
+        <div className="min-h-[50vh] flex flex-col items-center justify-center p-8 bg-white dark:bg-slate-900 rounded-3xl border border-rose-200 dark:border-rose-900/50 text-center space-y-4">
+          <div className="w-16 h-16 rounded-2xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-2xl">
             403
           </div>
-          <h2 className="text-xl font-bold text-slate-900">Access Denied: Faculty Roll Call Terminal</h2>
-          <p className="text-xs text-slate-500 max-w-md">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">Access Denied: Faculty Roll Call Terminal</h2>
+          <p className="text-xs text-slate-500 dark:text-slate-400 max-w-md">
             Only authenticated faculty course in-charges may access student roll call terminals or submit attendance records.
           </p>
           <button
             onClick={() => setActiveTab(role === 'ADMIN' ? 'admin' : 'dashboard')}
-            className="px-4 py-2 bg-blue-900 text-white rounded-xl text-xs font-bold hover:bg-blue-800 transition"
+            className="px-4 py-2 bg-blue-900 dark:bg-blue-600 text-white rounded-xl text-xs font-bold hover:bg-blue-800 transition"
           >
             Return to Authorized Portal
           </button>
@@ -164,7 +164,7 @@ export const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans selection:bg-orange-500 selection:text-white">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0B1329] text-slate-800 dark:text-slate-100 flex flex-col font-sans selection:bg-orange-500 selection:text-white transition-colors duration-200">
       {/* Top Main Navbar */}
       <Navbar onOpenSearch={() => setIsSearchOpen(true)} />
 
@@ -178,7 +178,7 @@ export const AppContent: React.FC = () => {
           {isLoading ? (
             <div className="min-h-[50vh] flex flex-col items-center justify-center space-y-3">
               <div className="w-10 h-10 border-4 border-blue-900 border-t-orange-500 rounded-full animate-spin"></div>
-              <p className="text-xs font-semibold text-slate-500 font-mono">
+              <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 font-mono">
                 Synchronizing with Aditya University SSIS Gateway...
               </p>
             </div>
@@ -189,10 +189,10 @@ export const AppContent: React.FC = () => {
       </div>
 
       {/* Mobile Bottom Navigation Bar (Visible only on small devices) */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 z-40 flex items-center justify-around text-[10px] font-semibold text-slate-500">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-3 py-2 z-40 flex items-center justify-around text-[10px] font-semibold text-slate-500 dark:text-slate-400">
         <button
           onClick={() => setActiveTab('dashboard')}
-          className={`flex flex-col items-center gap-1 ${activeTab === 'dashboard' ? 'text-blue-900 font-bold' : ''}`}
+          className={`flex flex-col items-center gap-1 ${activeTab === 'dashboard' ? 'text-blue-900 dark:text-blue-400 font-bold' : ''}`}
         >
           <LayoutDashboard className="w-4 h-4" />
           <span>Home</span>
@@ -200,7 +200,7 @@ export const AppContent: React.FC = () => {
 
         <button
           onClick={() => setActiveTab('timetable')}
-          className={`flex flex-col items-center gap-1 ${activeTab === 'timetable' ? 'text-blue-900 font-bold' : ''}`}
+          className={`flex flex-col items-center gap-1 ${activeTab === 'timetable' ? 'text-blue-900 dark:text-blue-400 font-bold' : ''}`}
         >
           <Calendar className="w-4 h-4" />
           <span>Classes</span>
@@ -208,7 +208,7 @@ export const AppContent: React.FC = () => {
 
         <button
           onClick={() => setActiveTab('prediction')}
-          className={`flex flex-col items-center gap-1 ${activeTab === 'prediction' ? 'text-orange-600 font-bold' : ''}`}
+          className={`flex flex-col items-center gap-1 ${activeTab === 'prediction' ? 'text-orange-600 dark:text-orange-400 font-bold' : ''}`}
         >
           <Sparkles className="w-4 h-4 text-orange-500" />
           <span>AI Forecast</span>
@@ -216,7 +216,7 @@ export const AppContent: React.FC = () => {
 
         <button
           onClick={() => setActiveTab('performance')}
-          className={`flex flex-col items-center gap-1 ${activeTab === 'performance' ? 'text-blue-900 font-bold' : ''}`}
+          className={`flex flex-col items-center gap-1 ${activeTab === 'performance' ? 'text-blue-900 dark:text-blue-400 font-bold' : ''}`}
         >
           <Award className="w-4 h-4" />
           <span>Results</span>
@@ -224,7 +224,7 @@ export const AppContent: React.FC = () => {
 
         <button
           onClick={() => setActiveTab('profile')}
-          className={`flex flex-col items-center gap-1 ${activeTab === 'profile' ? 'text-blue-900 font-bold' : ''}`}
+          className={`flex flex-col items-center gap-1 ${activeTab === 'profile' ? 'text-blue-900 dark:text-blue-400 font-bold' : ''}`}
         >
           <User className="w-4 h-4" />
           <span>ID Card</span>

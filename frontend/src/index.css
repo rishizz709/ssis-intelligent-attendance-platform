@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#F8FAFC] text-slate-800 antialiased font-sans;
+    @apply bg-[#F8FAFC] dark:bg-[#0B1329] text-slate-800 dark:text-slate-100 antialiased font-sans transition-colors duration-200;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
@@ -24,8 +24,17 @@
   background: #F1F5F9;
 }
 
+.dark ::-webkit-scrollbar-track {
+  background: #0B1329;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1E293B;
   border-radius: 9999px;
 }
 
@@ -33,13 +42,17 @@
   background: #94A3B8;
 }
 
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
 /* Micro-interaction utilities */
 .card-modern {
-  @apply bg-white rounded-2xl border border-slate-200/80 shadow-card transition-all duration-300;
+  @apply bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-card dark:shadow-none transition-all duration-300;
 }
 
 .card-modern:hover {
-  @apply shadow-card-hover border-slate-300/90;
+  @apply shadow-card-hover border-slate-300/90 dark:border-slate-700/80;
 }
 
 .badge-status {

@@ -112,23 +112,23 @@ export const FacultyPanelView: React.FC = () => {
       )}
 
       {/* Roster Table Card */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
-        <div className="p-6 border-b border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
+        <div className="p-6 border-b border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <h2 className="text-base font-bold text-slate-900">Student Roll Call (Section A)</h2>
-            <p className="text-xs text-slate-500">Click student status pill to toggle Present / Absent.</p>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white">Student Roll Call (Section A)</h2>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Click student status pill to toggle Present / Absent.</p>
           </div>
 
           <div className="flex items-center space-x-2">
             <button
               onClick={() => markAll(true)}
-              className="px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
             >
               <Check className="w-3.5 h-3.5" /> All Present
             </button>
             <button
               onClick={() => markAll(false)}
-              className="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-800 text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-800 dark:text-rose-300 text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
             >
               <RotateCcw className="w-3.5 h-3.5" /> All Absent
             </button>
@@ -138,20 +138,20 @@ export const FacultyPanelView: React.FC = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs border-collapse">
             <thead>
-              <tr className="bg-slate-50 text-[11px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-200">
+              <tr className="bg-slate-50 dark:bg-slate-800/80 text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider border-b border-slate-200 dark:border-slate-800">
                 <th className="py-3 px-6">Roll Number</th>
                 <th className="py-3 px-4">Student Name</th>
                 <th className="py-3 px-4 text-center">Prior Attendance</th>
                 <th className="py-3 px-6 text-right">Mark Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-slate-700">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
               {roster.map(st => (
-                <tr key={st.rollNumber} className="hover:bg-slate-50 transition-colors">
-                  <td className="py-3.5 px-6 font-mono font-bold text-blue-900">{st.rollNumber}</td>
-                  <td className="py-3.5 px-4 font-semibold text-slate-900">{st.name}</td>
+                <tr key={st.rollNumber} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors">
+                  <td className="py-3.5 px-6 font-mono font-bold text-blue-900 dark:text-blue-400">{st.rollNumber}</td>
+                  <td className="py-3.5 px-4 font-semibold text-slate-900 dark:text-white">{st.name}</td>
                   <td className="py-3.5 px-4 text-center font-bold">
-                    <span className={st.priorAttendance >= 75 ? 'text-emerald-700' : 'text-rose-600'}>
+                    <span className={st.priorAttendance >= 75 ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}>
                       {st.priorAttendance.toFixed(2)}%
                     </span>
                   </td>
@@ -176,9 +176,9 @@ export const FacultyPanelView: React.FC = () => {
         </div>
 
         {/* Topic & Confirmation Footer */}
-        <form onSubmit={handleSubmit} className="p-6 bg-slate-50 border-t border-slate-200 space-y-4">
+        <form onSubmit={handleSubmit} className="p-6 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 space-y-4">
           <div>
-            <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+            <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider block mb-1.5">
               Topic / Syllabus Delivered
             </label>
             <input
@@ -187,17 +187,17 @@ export const FacultyPanelView: React.FC = () => {
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
               placeholder="e.g. Unit 3: Design Patterns and Class Diagrams..."
-              className="w-full p-2.5 rounded-xl border border-slate-300 text-xs text-slate-900 bg-white"
+              className="w-full p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-slate-100 bg-white dark:bg-slate-800/90 focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
 
           <div className="flex items-center justify-between pt-2">
-            <span className="text-xs text-slate-500 font-medium">
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
               Timestamp: {new Date().toLocaleDateString()} • Instructor Signature Recorded
             </span>
             <button
               type="submit"
-              className="px-6 py-2.5 rounded-xl bg-purple-900 hover:bg-purple-800 text-white font-bold text-xs shadow-md shadow-purple-900/20 flex items-center space-x-2 transition-all cursor-pointer"
+              className="px-6 py-2.5 rounded-xl bg-purple-900 hover:bg-purple-800 dark:bg-purple-700 dark:hover:bg-purple-600 text-white font-bold text-xs shadow-md shadow-purple-900/20 flex items-center space-x-2 transition-all cursor-pointer"
             >
               <Send className="w-4 h-4" />
               <span>Submit & Publish Attendance</span>
