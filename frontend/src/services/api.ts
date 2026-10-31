@@ -22,7 +22,11 @@ import {
 import { calculateAiPrediction } from '../utils/aiPrediction';
 import { calculatePercentage, classesRequiredForTarget, safeMissesAllowed } from '../utils/attendanceMath';
 
-const API_BASE = '/api';
+// Dynamically resolve API base from environment variable (for deployed backend on Render) or fallback to local proxy '/api'
+const envApiUrl = (import.meta.env.VITE_API_BASE_URL || '').trim();
+const API_BASE = envApiUrl
+  ? (envApiUrl.endsWith('/api') ? envApiUrl.replace(/\/+$/, '') : `${envApiUrl.replace(/\/+$/, '')}/api`)
+  : '/api';
 
 // Local storage keys for resilient persistence — role-scoped to prevent cross-role leakage
 const STORAGE_KEYS = {
@@ -45,7 +49,7 @@ class ApiService {
 
   private async checkBackendHealth(): Promise<boolean> {
     try {
-      const res = await fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(1500) });
+      const res = await fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(4000) });
       this.isBackendOnline = res.ok;
       return res.ok;
     } catch {
