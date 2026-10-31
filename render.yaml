@@ -5,6 +5,7 @@ services:
     rootDir: backend
     buildCommand: mvn clean package -DskipTests
     startCommand: java -jar target/ssis-backend-2.5.0.jar
+    healthCheckPath: /api/health
     envVars:
       - key: PORT
         value: 10000
