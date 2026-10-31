@@ -9,4 +9,6 @@ services:
     envVars:
       - key: PORT
         value: 10000
+      - key: OPENAPI_PRODUCTION_URL
+        value: https://ssis-intelligent-attendance-platform.onrender.com
     plan: free

@@ -1,7 +1,13 @@
 server:
   port: ${PORT:8080}
+  forward-headers-strategy: framework
   servlet:
     context-path: /
+
+app:
+  openapi:
+    production-url: ${OPENAPI_PRODUCTION_URL:${RENDER_EXTERNAL_URL:https://ssis-intelligent-attendance-platform.onrender.com}}
+    local-url: http://localhost:8080
 
 spring:
   application:
