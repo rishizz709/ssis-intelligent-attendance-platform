@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/timetable")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(originPatterns = "*")
 @Tag(name = "Academic Timetable", description = "Timetable matrix, next class countdown, and CSV import")
 public class TimetableController {
 

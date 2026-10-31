@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/admin")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(originPatterns = "*")
 @Tag(name = "Administration Console", description = "Student CRUD management and Spring AOP telemetry viewer")
 public class AdminController {
 

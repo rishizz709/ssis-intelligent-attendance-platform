@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/attendance")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(originPatterns = "*")
 @Tag(name = "Attendance Management", description = "Endpoints for student attendance, forecasting, and what-if simulation")
 public class AttendanceController {
 

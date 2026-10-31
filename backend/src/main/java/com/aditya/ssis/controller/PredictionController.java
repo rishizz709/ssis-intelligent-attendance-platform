@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/prediction")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(originPatterns = "*")
 @Tag(name = "AI Prediction Center", description = "Machine Learning forecast, regression intervals, and what-if scenarios")
 public class PredictionController {
 

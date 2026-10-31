@@ -1,5 +1,8 @@
 package com.aditya.ssis.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,16 +13,19 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class AcademicResult {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "student_id", nullable = false)
     private Student student;
 
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
@@ -46,4 +52,14 @@ public class AcademicResult {
     private String grade; // O, A+, A, B+, B
 
     private Double gradePoints; // 10.0, 9.0, 8.0...
+
+    @JsonProperty("courseCode")
+    public String getCourseCode() {
+        return course != null ? course.getCourseCode() : null;
+    }
+
+    @JsonProperty("courseName")
+    public String getCourseName() {
+        return course != null ? course.getCourseName() : null;
+    }
 }

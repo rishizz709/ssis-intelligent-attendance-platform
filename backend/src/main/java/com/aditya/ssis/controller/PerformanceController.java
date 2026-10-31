@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/performance")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(originPatterns = "*")
 @Tag(name = "Academic Performance", description = "Internal assessment scores, CGPA progression, and marks evaluation")
 public class PerformanceController {
 
