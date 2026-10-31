@@ -127,3 +127,11 @@ ssis-smart-student-system/
 - **Contract-First SOAP Service:** Standardized WSDL XML endpoint for enterprise interoperability.
 - **Spring AOP Telemetry:** Non-intrusive latency profiling and system audit logging.
 - **Dual-Mode Client:** Automatic fallback to client-side store when backend is starting.
+
+---
+
+## Live Deployment
+
+- **Frontend (Netlify):** https://ssis-platform.netlify.app
+- **Backend (Render):** https://ssis-intelligent-attendance-platform.onrender.com
+- **API Documentation (Swagger):** https://ssis-intelligent-attendance-platform.onrender.com/swagger-ui/index.html
